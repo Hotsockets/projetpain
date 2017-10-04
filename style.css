@@ -1,3 +1,41 @@
+/*footer*/
+footer {
+width: 100%;
+z-index: 1;
+background-color: #ccbdb9;
+}
+footer div ul{
+  text-align: center;
+}
+footer div ul li {
+padding-top: 20px;
+margin-left: 50px;
+list-style: none;
+}
+/*footer réseaux sociaux*/
+footer div ul li a {
+color: black;
+cursor: pointer;
+}
+/*footer §*/
+footer div p{
+  text-align: center;
+}
+footer div p a{
+  text-align: center;
+  color: black;
+}
+/*n° de téléphone cliquable*/
+  .mobilesOnly {
+    visibility:hidden;
+  }
+/*image*/
+.img{
+  overflow:hidden;
+   border-radius:150px;
+   width:37px;
+   height:37px;
+
 
 .nav ul {
   display: flex;
@@ -56,7 +94,7 @@ section {
   display: inherit;
   flex-wrap: wrap;
   justify-content:center;
-  align-items: flex-start;
+  align-items: flex-start;>>>>>>> dev
 
   padding: 20px;
 

@@ -1,3 +1,4 @@
+
 .nav ul {
   display: flex;
   justify-content: center;
@@ -35,4 +36,55 @@
 .nav li:hover {
   border-bottom: solid 5px rgba(75, 67, 67, 0.7);
 
+
+body {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+h2 {
+  margin-top: 20px;
+}
+
+section {
+  background-color: #222;
+  display: flex;
+  justify-content:center;
+}
+
+.wrapper {
+  display: inherit;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: flex-start;
+
+  padding: 20px;
+
+  width: 80%;
+  background-color: white;
+}
+
+.map {
+  width: 600px;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.address {
+  width: 360px;
+  height: 410px;
+  text-align: center;
+
+  padding: 20px;
+  margin: 20px;
+
+  border: 3px;
+  border-style: solid;
+  border-color: #eee;
+  border-radius: 10px;
+}
+
+li {
+  list-style-type: none;
 }

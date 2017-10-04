@@ -1,4 +1,42 @@
-<!-- Votre css2 -->
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: solid 1px rgba(75, 67, 67, 0.5);
+  border-bottom: solid 1px rgba(75, 67, 67, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.nav li {
+   flex-basis: 150px;
+   flex-grow: 150px;
+   flex-shrink: 150px;
+   display: inline-block;
+   margin-left: 10px;
+   margin-right: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
+
+ .nav a {
+    color:  rgba(75, 67, 67, 1);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none !important;
+    border-radius: 2px;
+    padding: 5px;
+     }
+
+.nav li:hover {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+
+
 body {
   margin: 0px;
   box-sizing: border-box;

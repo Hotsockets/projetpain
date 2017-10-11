@@ -27,7 +27,7 @@ overlay.addEventListener('click', function(e) {
 });
 
 
-  <!--Skype -->
+  <!--Modal -->
 var modal = document.getElementById('myModal');
 
 document

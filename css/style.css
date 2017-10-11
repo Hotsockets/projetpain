@@ -158,7 +158,6 @@ header {
 }
 
 
-
 .parallax {
   background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
 
@@ -178,11 +177,35 @@ header {
   font-size: 25px;
 }
 
+.conteneurproduit {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ficheproduit {
+  width: 350px;
+  height: 300px;
+  display: inherit;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ficheproduit p {
+  font-size: 20px;
+  text-align: center;
+
+}
+
+
 .lighboxImage {
+    text-align: center;
+    width: 300px;
+    height: 200px;
     border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    margin :40px 20px;
+    margin :20px 20px;
 }
 
 .lighboxImage:hover {opacity: 0.7;}

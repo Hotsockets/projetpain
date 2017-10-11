@@ -1,179 +1,230 @@
+/*#4f311c: marron*/
+
 body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+font-family: 'Bree Serif', serif;
 }
 
+section h2{
+text-align: center;
+}
+/*formulaire*/
+.position{
+width: 500px;
+margin-top: 15px;
+text-align: center;
+margin-left: auto;
+margin-right: auto;
+}
+
+.position input, textarea{
+margin-top: 20px;
+}
+
+button{
+display:block;
+width:150px;
+line-height:50px;
+text-align:center;
+vertical-align:middle;
+background-color: white;
+border-radius: 10px;
+color: black;
+font-size-adjust: auto;
+font-weight: bold;
+margin-left: 180px;
+opacity: 1;
+box-shadow: 10px 5px 5px #4f311c;
+}
+
+button:hover{
+background-color: #4f311c;
+color: white;
+}
+
+/*horaires*/
+.titre{
+text-align: center;
+width: 100%;
+}
+h2 {
+margin-top: 20px;
+font-family: 'Merriweather', serif;
+}
+
+
 header {
-    text-transform: uppercase;
-    background-color: #FFF;
-    padding: 16px 0 16px 32px;
-    font-size: 15px;
-    box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
+text-transform: uppercase;
+background-color: #FFF;
+padding: 16px 0 16px 32px;
+font-size: 15px;
+box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
 
 }
 
 #logo, nav, li {
-    display: inline-block;
+display: inline-block;
 }
 
 #logo {
-    background-color: #2196F3;
-    border-radius: 50%;
-    width: 48px;
-    height: 48px;
+background-color: #2196F3;
+border-radius: 50%;
+width: 48px;
+height: 48px;
 }
 
 #hamburger-content nav {
-    display: inline-block;
-    line-height: 48px;
-    vertical-align: top;
+display: inline-block;
+line-height: 48px;
+vertical-align: top;
 }
 
 #hamburger-content li {
-    margin-left: 32px;
+margin-left: 32px;
 }
 #hamburger-content li a, .button {
-    text-decoration: none;
-    color: #333;
+text-decoration: none;
+color: #333;
 }
 
 .button {
-    text-transform: uppercase;
-    float: right;
-    margin-top: -16px;
-    line-height: 84px;
-    height: 84px;
-    text-decoration: none;
-    padding: 0 16px;
+text-transform: uppercase;
+float: right;
+margin-top: -16px;
+line-height: 84px;
+height: 84px;
+text-decoration: none;
+padding: 0 16px;
 }
 
 
 #hamburger, #hamburger-content {
-    display: inline;
+display: inline;
 }
 
 #hamburger-button {
-    display: none;
-    cursor: pointer;
-    background: none;
-    border: none;
-    font-size: 30px;
-    vertical-align: top;
-    padding: 0;
-    line-height: 47px;
-    float: right;
-    margin-right: 32px;
+display: none;
+cursor: pointer;
+background: none;
+border: none;
+font-size: 30px;
+vertical-align: top;
+padding: 0;
+line-height: 47px;
+float: right;
+margin-right: 32px;
 }
 
 #hamburger-overlay {
-    display: none;
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, .4);
+display: none;
+position: fixed;
+z-index: 10;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, .4);
 }
 
 #hamburger-sidebar {
-    display: none;
-    position: fixed;
-    width: 84%;
-    z-index: 20;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background-color: #FFF;
-    overflow-y: auto;
-    transform: translateX(-100%);
-    transition: transform .2s ease-out;
+display: none;
+position: fixed;
+width: 84%;
+z-index: 20;
+height: 100%;
+top: 0;
+left: 0;
+background-color: #FFF;
+overflow-y: auto;
+transform: translateX(-100%);
+transition: transform .2s ease-out;
 }
 #hamburger-sidebar li {
-    transform: translateX(20%);
-    padding: 20px 20px;
-    display: block;
+transform: translateX(20%);
+padding: 20px 20px;
+display: block;
 }
 #hamburger-sidebar li a {
-  text-decoration: none;
-  color: black;
+text-decoration: none;
+color: black;
 }
 #hamburger-sidebar-header {
-    background: url(../images/sidebar-header.png) center;
-    background-size: cover;
-    height: 128px;
+background: url(../images/sidebar-header.png) center;
+background-size: cover;
+height: 128px;
 }
 #hamburger-sidebar-body {
-    padding: 16px 8px;
+padding: 16px 8px;
 }
 #hamburger-sidebar-body li:before {
-    content: ' ';
-    display: inline-block;
-    vertical-align: middle;
-    margin-bottom: 4px;
-    margin-right: 16px;
-    width: 24px;
-    height: 24px;
+content: ' ';
+display: inline-block;
+vertical-align: middle;
+margin-bottom: 4px;
+margin-right: 16px;
+width: 24px;
+height: 24px;
 }
 #hamburger-sidebar-body li:first-child:before {
-    background-image: url(../images/icons/discover.svg);
+background-image: url(../images/icons/discover.svg);
 }
 #hamburger-sidebar-body li:nth-child(2):before {
-    background-image: url(../images/icons/how.svg);
+background-image: url(../images/icons/how.svg);
 }
 #hamburger-sidebar-body li:nth-child(3):before {
-    background-image: url(../images/icons/about.svg);
+background-image: url(../images/icons/about.svg);
 }
 #hamburger-sidebar-body li:last-child:before {
-    background-image: url(../images/icons/qna.svg);
+background-image: url(../images/icons/qna.svg);
 }
 #hamburger-sidebar-body .button {
-    margin-top: 16px;
-    text-align: center;
-    float: none;
-    display: block;
-    height: auto;
-    line-height: inherit;
-    padding: 10px;
+margin-top: 16px;
+text-align: center;
+float: none;
+display: block;
+height: auto;
+line-height: inherit;
+padding: 10px;
 }
 
 @media screen and (max-width: 1024px) {
-    #hamburger-content {
-        display: none;
-    }
+#hamburger-content {
+display: none;
+}
 
-    #hamburger-button, #hamburger-sidebar,
-    .hamburger-activated #hamburger-overlay {
-        display: block;
-    }
+#hamburger-button, #hamburger-sidebar,
+.hamburger-activated #hamburger-overlay {
+display: block;
+}
 
-    .hamburger-activated #hamburger-sidebar {
-        transform: translateX(0);
-    }
+.hamburger-activated #hamburger-sidebar {
+transform: translateX(0);
+}
 }
 
 
 .parallax {
-  background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
+background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
 
-  height: 500px;
+height: 500px;
 
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Create the parallax scrolling effect */
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
 
 
 }
 
 .paragraph {
-  height : 150px;
-  font-size: 25px;
+height : 150px;
+font-size: 25px;
 }
 
 
@@ -185,7 +236,7 @@ background-color: #ccbdb9;
 }
 
 footer div ul{
-  text-align: center;
+text-align: center;
 }
 
 footer div ul li {
@@ -202,75 +253,75 @@ cursor: pointer;
 
 /*footer §*/
 footer div p{
-  text-align: center;
+text-align: center;
 }
 
 footer div p a{
-  text-align: center;
-  color: black;
+text-align: center;
+color: black;
 }
 
 /*n° de téléphone cliquable*/
-  .mobilesOnly {
-    visibility:hidden;
-  }
+.mobilesOnly {
+visibility:hidden;
+}
 
 /*image*/
 .img{
-  overflow:hidden;
-   border-radius:150px;
-   width:37px;
-   height:37px;
+overflow:hidden;
+border-radius:150px;
+width:37px;
+height:37px;
 }
 
 body {
-  margin: 0px;
-  box-sizing: border-box;
+margin: 0px;
+box-sizing: border-box;
 }
 
 h2 {
-  margin-top: 20px;
+margin-top: 20px;
 }
 
 section {
-  background-color: #222;
-  display: flex;
-  justify-content:center;
+background-color: #222;
+display: flex;
+justify-content:center;
 }
 
 .wrapper {
-  display: inherit;
-  flex-wrap: wrap;
-  justify-content:center;
-  align-items: flex-start;>>>>>>> dev
+display: inherit;
+flex-wrap: wrap;
+justify-content:center;
+align-items: flex-start;>>>>>>> dev
 
-  padding: 20px;
+padding: 20px;
 
-  width: 80%;
-  background-color: white;
+width: 80%;
+background-color: white;
 }
 
 .map {
-  width: 600px;
-  flex-basis: auto;
-  flex-grow: 0;
-  flex-shrink: 0;
+width: 600px;
+flex-basis: auto;
+flex-grow: 0;
+flex-shrink: 0;
 }
 
 .address {
-  width: 360px;
-  height: 410px;
-  text-align: center;
+width: 360px;
+height: 410px;
+text-align: center;
 
-  padding: 20px;
-  margin: 20px;
+padding: 20px;
+margin: 20px;
 
-  border: 3px;
-  border-style: solid;
-  border-color: #eee;
-  border-radius: 10px;
+border: 3px;
+border-style: solid;
+border-color: #eee;
+border-radius: 10px;
 }
 
 li {
-  list-style-type: none;
+list-style-type: none;
 }

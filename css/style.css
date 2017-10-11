@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #nav ul {
    display: flex;
    justify-content: center;
@@ -72,6 +73,167 @@
   }
 }
 
+=======
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+header {
+    text-transform: uppercase;
+    background-color: #FFF;
+    padding: 16px 0 16px 32px;
+    font-size: 15px;
+    box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
+
+}
+
+#logo, nav, li {
+    display: inline-block;
+}
+
+#logo {
+    background-color: #2196F3;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+}
+
+#hamburger-content nav {
+    display: inline-block;
+    line-height: 48px;
+    vertical-align: top;
+}
+
+#hamburger-content li {
+    margin-left: 32px;
+}
+#hamburger-content li a, .button {
+    text-decoration: none;
+    color: #333;
+}
+
+.button {
+    text-transform: uppercase;
+    float: right;
+    margin-top: -16px;
+    line-height: 84px;
+    height: 84px;
+    text-decoration: none;
+    padding: 0 16px;
+}
+
+
+#hamburger, #hamburger-content {
+    display: inline;
+}
+
+#hamburger-button {
+    display: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 30px;
+    vertical-align: top;
+    padding: 0;
+    line-height: 47px;
+    float: right;
+    margin-right: 32px;
+}
+
+#hamburger-overlay {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+#hamburger-sidebar {
+    display: none;
+    position: fixed;
+    width: 84%;
+    z-index: 20;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #FFF;
+    overflow-y: auto;
+    transform: translateX(-100%);
+    transition: transform .2s ease-out;
+}
+#hamburger-sidebar li {
+    transform: translateX(20%);
+    padding: 20px 20px;
+    display: block;
+}
+#hamburger-sidebar li a {
+  text-decoration: none;
+  color: black;
+}
+#hamburger-sidebar-header {
+    background: url(../images/sidebar-header.png) center;
+    background-size: cover;
+    height: 128px;
+}
+#hamburger-sidebar-body {
+    padding: 16px 8px;
+}
+#hamburger-sidebar-body li:before {
+    content: ' ';
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 4px;
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+}
+#hamburger-sidebar-body li:first-child:before {
+    background-image: url(../images/icons/discover.svg);
+}
+#hamburger-sidebar-body li:nth-child(2):before {
+    background-image: url(../images/icons/how.svg);
+}
+#hamburger-sidebar-body li:nth-child(3):before {
+    background-image: url(../images/icons/about.svg);
+}
+#hamburger-sidebar-body li:last-child:before {
+    background-image: url(../images/icons/qna.svg);
+}
+#hamburger-sidebar-body .button {
+    margin-top: 16px;
+    text-align: center;
+    float: none;
+    display: block;
+    height: auto;
+    line-height: inherit;
+    padding: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    #hamburger-content {
+        display: none;
+    }
+
+    #hamburger-button, #hamburger-sidebar,
+    .hamburger-activated #hamburger-overlay {
+        display: block;
+    }
+
+    .hamburger-activated #hamburger-sidebar {
+        transform: translateX(0);
+    }
+}
+
+
+>>>>>>> 5c6a62e0eda2a289ba847471853542b4b58f0754
 .parallax {
   background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
 

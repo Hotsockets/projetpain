@@ -156,6 +156,27 @@ header {
     }
 }
 
+
+.parallax {
+  background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
+
+  height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+}
+
+.paragraph {
+  height : 150px;
+  font-size: 25px;
+}
+
+
 /*footer*/
 footer {
 width: 100%;

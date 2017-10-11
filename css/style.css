@@ -1,0 +1,174 @@
+/*#4f311c: marron*/
+
+/*footer*/
+footer {
+width: 100%;
+z-index: 1;
+background-color: #ccbdb9;
+}
+footer div ul{
+  text-align: center;
+}
+footer div ul li {
+padding-top: 20px;
+margin-left: 50px;
+list-style: none;
+}
+/*footer réseaux sociaux*/
+footer div ul li a {
+color: black;
+cursor: pointer;
+}
+/*footer §*/
+footer div p{
+  text-align: center;
+}
+footer div p a{
+  text-align: center;
+  color: black;
+}
+/*n° de téléphone cliquable*/
+  .mobilesOnly {
+    visibility:hidden;
+  }
+/*image*/
+.img{
+  overflow:hidden;
+   border-radius:150px;
+   width:37px;
+   height:37px;
+}
+/* navbar*/
+
+.nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: solid 1px rgba(75, 67, 67, 0.5);
+  border-bottom: solid 1px rgba(75, 67, 67, 0.5);
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.nav li {
+   flex-basis: 150px;
+   flex-grow: 150px;
+   flex-shrink: 150px;
+   display: inline-block;
+   margin-left: 10px;
+   margin-right: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+ }
+
+ .nav a {
+    color:  rgba(75, 67, 67, 1);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+    text-decoration: none !important;
+    border-radius: 2px;
+    padding: 5px;
+     }
+
+.nav li:hover {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+}
+
+body {
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: 'Bree Serif', serif;
+}
+section h2{
+  text-align: center;
+}
+/*formulaire*/
+.position{
+  width: 500px;
+  margin-top: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.position input, textarea{
+  margin-top: 20px;
+}
+
+button{
+  display:block;
+  width:150px;
+  line-height:50px;
+  text-align:center;
+  vertical-align:middle;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-size-adjust: auto;
+  font-weight: bold;
+  margin-left: 180px;
+  opacity: 1;
+  box-shadow: 10px 5px 5px #4f311c;
+}
+
+button:hover{
+  background-color: #4f311c;
+  color: white;
+}
+
+/*horaires*/
+.titre{
+  text-align: center;
+  width: 100%;
+}
+h2 {
+  margin-top: 20px;
+  font-family: 'Merriweather', serif;
+  }
+
+.carte {
+  background-color: #222;
+  display: flex;
+  justify-content:center;
+  margin-top: 50px;
+}
+
+/*carte*/
+.wrapper {
+  display: inherit;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: flex-start;
+  padding: 20px;
+  width: 80%;
+  background-color: white;
+}
+
+.map {
+  width: 600px;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.address {
+  width: 360px;
+  height: 410px;
+  text-align: center;
+
+  padding: 20px;
+  margin: 20px;
+
+  border: 3px;
+  border-style: solid;
+  border-color: #eee;
+  border-radius: 10px;
+}
+
+li {
+  list-style-type: none;
+}

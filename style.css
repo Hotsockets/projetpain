@@ -1,3 +1,5 @@
+/*#4f311c: marron*/
+
 /*footer*/
 footer {
 width: 100%;
@@ -35,7 +37,8 @@ footer div p a{
    border-radius:150px;
    width:37px;
    height:37px;
-
+}
+/* navbar*/
 
 .nav ul {
   display: flex;
@@ -73,31 +76,74 @@ footer div p a{
 
 .nav li:hover {
   border-bottom: solid 5px rgba(75, 67, 67, 0.7);
-
+}
 
 body {
   margin: 0px;
   box-sizing: border-box;
+  font-family: 'Bree Serif', serif;
+}
+section h2{
+  text-align: center;
+}
+/*formulaire*/
+.position{
+  width: 500px;
+  margin-top: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-h2 {
+.position input, textarea{
   margin-top: 20px;
 }
 
-section {
+button{
+  display:block;
+  width:150px;
+  line-height:50px;
+  text-align:center;
+  vertical-align:middle;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-size-adjust: auto;
+  font-weight: bold;
+  margin-left: 180px;
+  opacity: 1;
+  box-shadow: 10px 5px 5px #4f311c;
+}
+
+button:hover{
+  background-color: #4f311c;
+  color: white;
+}
+
+/*horaires*/
+.titre{
+  text-align: center;
+  width: 100%;
+}
+h2 {
+  margin-top: 20px;
+  font-family: 'Merriweather', serif;
+  }
+
+.carte {
   background-color: #222;
   display: flex;
   justify-content:center;
+  margin-top: 50px;
 }
 
+/*carte*/
 .wrapper {
   display: inherit;
   flex-wrap: wrap;
   justify-content:center;
-  align-items: flex-start;>>>>>>> dev
-
+  align-items: flex-start;
   padding: 20px;
-
   width: 80%;
   background-color: white;
 }

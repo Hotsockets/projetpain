@@ -53,3 +53,17 @@ document
 		if (document.getElementsByClassName)
     modal.style.display = "none";
 }
+
+
+$(document).scroll(function(){ // écoute quand on scroll
+
+	 // Valeur en Px de la position actuelle du navigateur
+	if($(window).scrollTop() > 225){
+		$('.nav').fadeIn(1000);
+		$('.nav').removeClass('hide');
+	} else {
+		$('.nav').addClass('hide');
+		$('.nav').fadeOut(1000);
+	}
+
+});

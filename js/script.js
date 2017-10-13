@@ -61,9 +61,13 @@ $(document).scroll(function(){ // écoute quand on scroll
 	if($(window).scrollTop() > 225){
 		$('.nav').fadeIn(1000);
 		$('.nav').removeClass('hide');
-	} else {
-		$('.nav').addClass('hide');
+	}
+	if ($(window).toggleClass('.hamburger-content')){
+			$('.nav').addClass('hide');
+	}
+	 else {
 		$('.nav').fadeOut(1000);
+		$('.nav').addClass('hide');
 	}
 
 });

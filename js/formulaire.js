@@ -33,7 +33,10 @@ $(document).scroll(function(){ // écoute quand on scroll
 	if($(window).scrollTop() > 225){
 		$('.nav').fadeIn(1000);
 		$('.nav').removeClass('hide');
-	} else {
+	}
+	if ($(window).toggleClass('.hamburger-content')){
+				$('.nav').addClass('hide');
+		}else {
 		$('.nav').addClass('hide');
 		$('.nav').fadeOut(1000);
 	}

@@ -235,7 +235,7 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   background-color: white;
 }
 
-.nav ul li {
+.nav > ul > li {
   display: flex;
   box-sizing: border-box;
   justify-content: space-around;
@@ -243,7 +243,7 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
  }
 
- .nav ul li a {
+ .nav > ul > li > a {
     color:  rgba(75, 67, 67, 1);
     text-transform: uppercase;
     font-weight: bold;
@@ -453,7 +453,9 @@ width: 100%;
 }
 
 section {
+/*
 background-color: #222;
+*/
 display: flex;
 justify-content:center;
 }

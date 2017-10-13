@@ -13,15 +13,36 @@
 
 <body>
   <header>
-    <h1></h1>
+    <a href="#" id="logo"></a>
+    <div id="hamburger">
+      <div id="hamburger-content">
+        <nav>
+          <ul>
+            <li><a href="#">Notre maison</a></li>
+            <li><a href="#">Produits</a></li>
+            <li><a href="#">Nous contacter</a></li>
+
+          </ul>
+        </nav>
+      </div>
+      <button id="hamburger-button">&#9776;</button>
+      <div id="hamburger-sidebar">
+        <div id="hamburger-sidebar-header"></div>
+        <div id="hamburger-sidebar-body"></div>
+      </div>
+      <div id="hamburger-overlay"></div>
+    </div>
+
+
+
   </header>
 
-  <nav class="nav">
-    <ul class="nav-list">
-      <li><a href="#">Notre maison</a></li>
-      <li><a href="#">Produits</a></li>
-      <li><a href="#">Nous contacter</a></li>
-    </ul>
+  <nav class="nav hide">
+      <ul class="nav-list">
+        <li><a href="#">Notre maison</a></li>
+        <li><a href="#">Produits</a></li>
+        <li><a href="#">Nous contacter</a></li>
+      </ul>
   </nav>
 
   <section class="position">
@@ -104,6 +125,8 @@
 
         </div>
       </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       <script type="text/javascript" src="js/formulaire.js"></script>
     </body>
 
     </html>

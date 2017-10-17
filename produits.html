@@ -1,158 +1,139 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" />
-    <title>Produits</title>
-  </head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Page d'accueil</title>
+</head>
 
-  <body>
-
-    <header>
-      <a href="#" id="logo"></a>
-      <div id="hamburger">
-        <div id="hamburger-content">
-          <nav>
-            <ul>
-              <li><a href="#">Notre maison</a></li>
-              <li>
-      <div class="dropdown">
-        <a class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Produits
-        <span class="caret"></span></a>
-        <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pain</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Viennoiseries</a></li>
-          <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patisseries</a></li>
-        </ul>
-      </li>
-              <li><a href="#">Nous contacter</a></li>
-
-            </ul>
-          </nav>
-        </div>
-        <button id="hamburger-button">&#9776;</button>
-        <div id="hamburger-sidebar">
-          <div id="hamburger-sidebar-header"></div>
-          <div id="hamburger-sidebar-body"></div>
-        </div>
-        <div id="hamburger-overlay"></div>
+<body>
+  <header>
+    <a href="#" id="logo"></a>
+    <div id="hamburger">
+      <div id="hamburger-content">
+        <nav>
+          <ul>
+            <li><a href="#">Notre maison</a></li>
+            <li>
+              <div class="dropdown">
+                <a class="btn btn-default dropdown-toggle" id="menu1" data-toggle="dropdown">Produits<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pain</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Viennoiseries</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patisseries</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">Nous contacter</a></li>
+          </ul>
+        </nav>
       </div>
-
-
-
-    </header>
-
-    <nav class="nav hide">
-        <ul class="nav-list">
-          <li><a href="#">Notre maison</a></li>
-          <li>
-  <div class="dropdown">
-    <a class="btn btn-default dropdown-toggle" type="button" id="menu1" data-toggle="dropdown">Produits
-    <span class="caret"></span></a>
-    <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pain</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Viennoiseries</a></li>
-      <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patisseries</a></li>
+      <button id="hamburger-button">&#9776;</button>
+      <div id="hamburger-sidebar">
+        <div id="hamburger-sidebar-header"></div>
+        <div id="hamburger-sidebar-body"></div>
+      </div>
+      <div id="hamburger-overlay"></div>
+    </div>
+  </header>
+  <nav class="nav hide">
+    <ul class="nav-list">
+      <li><a href="#">Notre maison</a></li>
+      <li>
+        <div class="dropdown">
+          <a class="btn btn-default dropdown-toggle" id="menu1" data-toggle="dropdown">Produits<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pain</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Viennoiseries</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Patisseries</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="#">Nous contacter</a></li>
     </ul>
-  </li>
-          <li><a href="#">Nous contacter</a></li>
+  </nav>
+  <div class="parallax">
+  </div>
+  <div class="conteneurproduit">
+    <div class="ficheproduit">
+      <img class="lighboxImage" src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights, Norway">
+      <p>Lorem Ipsum</p>
+    </div>
+    <div class="ficheproduit">
+      <img class="lighboxImage" src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights, Norway">
+      <p>Lorem Ipsum</p>
+    </div>
+    <div class="ficheproduit">
+      <img class="lighboxImage" src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights, Norway">
+      <p>Lorem Ipsum</p>
+    </div>
+  </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">×</span>
+    <img class="modal-content" id="img01" alt="modal">
+    <div id="caption"></div>
+  </div>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <footer>
+    <div class="container-fluid">
+      <div class = "row">
+        <ul class="list-inline">
+          <li class="line-inline-item"><a href="#">Notre maison</a></li>
+          <li class="line-inline-item"><a href="#">Produits</a></li>
+          <li class="line-inline-item"><a href="#">Nous contacter</a></li>
         </ul>
-    </nav>
-
-
-    <div class="parallax"></div>
-
-<div class="conteneurproduit">
-
-  <div class="ficheproduit">
-    <img class="lighboxImage" src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights, Norway">
-    <p>Lorem Ipsum</p>
-  </div>
-  <div class="ficheproduit">
-    <img class="lighboxImage" src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights, Norway">
-    <p>Lorem Ipsum</p>
-  </div>
-  <div class="ficheproduit">
-    <img class="lighboxImage" src="https://www.w3schools.com/css/img_lights.jpg" alt="Northern Lights, Norway">
-    <p>Lorem Ipsum</p>
-  </div>
-
+      </div>
+      <div class="row">
+        <p class="col-xs-12">
+          <a href="tel:0102030405" class="mobilesOnly col-xs-12">Appeler le 0102030405</a><!-- Web-->
+          <a href="callto:0102030405"> Appeler le 0102030405</a><!--Skype -->
+          <br/>Adresse : 11 , rue de Poissy
+        </p>
+      </div>
+      <div class="row">
+        <ul class="list-inline col-xs-12 col-md-6">
+          <li class="line-inline-item"><a href="http://www.chartequalite-artisanat.com/charte-qualite-artisanat">Charte qualité</a></li>
+          <li class="line-inline-item"><a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000169225&fastPos=2&fastReqId=1752492258&categorieLien=cid&oldAction=rechTexte">Norme hygiène</a></li>
+          <li class="line-inline-item"> <a href="#(page.hmtl)"><img class="img" src="reseaux/pmr.jpg" alt="PMR"></a></li>
+        </ul>
+        <ul class="list-inline col-xs-12 col-md-6">
+          <li class="line-inline-item"> <a href="http://www.facebook.com"><img class="img" src="reseaux/fb.png" alt="FB"></a></li>
+          <li class="line-inline-item"> <a href="https://www.instagram.com"><img class="img" src="reseaux/insta.jpg" alt="insta"></a></li>
+          <li class="line-inline-item"> <a href="https://twitter.com"><img class="img" src="reseaux/twitter.jpg" alt="twitter"></a></li>
+        </ul>
+      </div>
     </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-      <span class="close">×</span>
-      <img class="modal-content" id="img01">
-      <div id="caption"></div>
-    </div>
+</body>
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-    <footer>
-         <div class="container-fluid">
-         <div class = "row">
-
-           <ul class="list-inline">
-             <li class="line-inline-item"><a href="#">Notre maison</a></li>
-
-             <li class="line-inline-item"><a href="#">Produits</a></li>
-
-             <li class="line-inline-item"><a href="#">Nous contacter</a></li>
-         </div>
-
-         <div class="row">
-             <p class="col-xs-12"><a href="tel: 0102030405"  class="mobilesOnly col-xs-12">Appeler le  0102030405</a><!-- Web-->
-             <a href="callto: 0102030405"> Appeler le 0102030405</a><!--Skype -->
-              <br/>Adresse : 11 , rue de Poissy</p>
-         </div>
-
-         <div class="row">
-              <ul class="list-inline col-xs-12 col-md-6">
-                <li class="line-inline-item"><a href="http://www.chartequalite-artisanat.com/charte-qualite-artisanat">Charte qualité</a></li>
-                <li class="line-inline-item"><a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000169225&fastPos=2&fastReqId=1752492258&categorieLien=cid&oldAction=rechTexte">Norme hygiène</a></li>
-                <li class="line-inline-item"> <a href="#(page.hmtl)"><img class="img" src="reseaux/pmr.jpg"></a></li>
-              </ul>
-               <ul class="list-inline col-xs-12 col-md-6">
-                <li class="line-inline-item"> <a href="http://www.facebook.com"><img class="img" src="reseaux/fb.png"></a></li>
-               <li class="line-inline-item"> <a href="https://www.instagram.com"><img class="img" src="reseaux/insta.jpg"></a></li>
-               <li class="line-inline-item"> <a href="https://twitter.com"><img class="img" src="reseaux/twitter.jpg"></a></li>
-             </ul>
-         </div>
-
-       </div>
-     </footer>
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-           <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         <script type="text/javascript" src="js/script.js"></script>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-     <script type="text/javascript" src="js/script.js"></script>
-
-    </body>
-
-    </html>
+</html>

@@ -32,12 +32,12 @@ $(document).scroll(function(){ // écoute quand on scroll
 	 // Valeur en Px de la position actuelle du navigateur
 	if($(window).scrollTop() > 225){
 		$('.nav').fadeIn(1000);
-		$('.nav').removeClass('hide');
+		$('.nav').removeClass('pasla');
 	}
 	if ($(window).toggleClass('.hamburger-content')){
-				$('.nav').addClass('hide');
-		}else {
-		$('.nav').addClass('hide');
+				$('.nav').addClass('pasla');
+		} else {
+		$('.nav').addClass('pasla');
 		$('.nav').fadeOut(1000);
 	}
 

@@ -1,150 +1,152 @@
 body {
-margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* NAVBAR */
 header {
-text-transform: uppercase;
-background-color: #FFF;
-padding: 16px 0 16px 32px;
-font-size: 15px;
-box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
-
+  text-transform: uppercase;
+  background-color: #FFF;
+  padding: 16px 0 16px 32px;
+  font-size: 15px;
+  box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
 }
 
+/*
+*/
 #logo, nav, li {
-display: inline-block;
+  display: inline-block;
 }
 
 #logo {
-background-color: #2196F3;
-border-radius: 50%;
-width: 48px;
-height: 48px;
+  background-color: #2196F3;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
 }
 
 #hamburger-content nav {
-display: inline-block;
-line-height: 48px;
-vertical-align: top;
+  display: inline-block;
+  line-height: 48px;
+  vertical-align: top;
 }
 
 #hamburger-content li {
-margin-left: 32px;
+  margin-left: 32px;
 }
 #hamburger-content li a, .button {
-text-decoration: none;
-color: #333;
+  text-decoration: none;
+  color: #333;
 }
 
 
 #hamburger, #hamburger-content {
-display: inline;
+  display: inline;
 }
 
 #hamburger-button {
-display: none;
-cursor: pointer;
-background: none;
-border: none;
-font-size: 30px;
-vertical-align: top;
-padding: 0;
-line-height: 47px;
-float: right;
-margin-right: 32px;
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+  vertical-align: top;
+  padding: 0;
+  line-height: 47px;
+  float: right;
+  margin-right: 32px;
 }
 
 #hamburger-overlay {
-display: none;
-position: fixed;
-z-index: 10;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, .4);
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
 }
 
 #hamburger-sidebar {
-display: none;
-position: fixed;
-width: 84%;
-z-index: 20;
-height: 100%;
-top: 0;
-left: 0;
-background-color: #FFF;
-overflow-y: auto;
-transform: translateX(-100%);
-transition: transform .2s ease-out;
+  display: none;
+  position: fixed;
+  width: 84%;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform .2s ease-out;
 }
 #hamburger-sidebar li {
-transform: translateX(20%);
-padding: 20px 20px;
-display: block;
+  transform: translateX(20%);
+  padding: 20px 20px;
+  display: block;
 }
+
 #hamburger-sidebar li a {
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
 #hamburger-sidebar-header {
-background: url(../images/sidebar-header.png) center;
-background-size: cover;
-height: 128px;
+  background: url(../images/sidebar-header.png) center;
+  background-size: cover;
+  height: 128px;
 }
 #hamburger-sidebar-body {
-padding: 16px 8px;
+  padding: 16px 8px;
 }
 #hamburger-sidebar-body li:before {
-content: ' ';
-display: inline-block;
-vertical-align: middle;
-margin-bottom: 4px;
-margin-right: 16px;
-width: 24px;
-height: 24px;
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
 }
 #hamburger-sidebar-body li:first-child:before {
-background-image: url(../images/icons/discover.svg);
+  background-image: url(../images/icons/discover.svg);
 }
 #hamburger-sidebar-body li:nth-child(2):before {
-background-image: url(../images/icons/how.svg);
+  background-image: url(../images/icons/how.svg);
 }
 #hamburger-sidebar-body li:nth-child(3):before {
-background-image: url(../images/icons/about.svg);
+  background-image: url(../images/icons/about.svg);
 }
 #hamburger-sidebar-body li:last-child:before {
-background-image: url(../images/icons/qna.svg);
+  background-image: url(../images/icons/qna.svg);
 }
 #hamburger-sidebar-body .button {
-margin-top: 16px;
-text-align: center;
-float: none;
-display: block;
-height: auto;
-line-height: inherit;
-padding: 10px;
+  margin-top: 16px;
+  text-align: center;
+  float: none;
+  display: block;
+  height: auto;
+  line-height: inherit;
+  padding: 10px;
 }
 
 @media screen and (max-width: 1024px) {
-#hamburger-content {
-display: none;
-}
+  #hamburger-content {
+    display: none;
+  }
 
-#hamburger-button, #hamburger-sidebar,
-.hamburger-activated #hamburger-overlay {
-display: block;
-}
+  #hamburger-button, #hamburger-sidebar,
+  .hamburger-activated #hamburger-overlay {
+    display: block;
+  }
 
-.hamburger-activated #hamburger-sidebar {
-transform: translateX(0);
-}
+  .hamburger-activated #hamburger-sidebar {
+    transform: translateX(0);
+  }
 }
 
 
@@ -214,12 +216,12 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   border: none;
 }
 
-.dropdown a:hover  {
+.dropdown a:hover {
   background-color: white;
   color: black;
 }
 
-.nav.hide{
+.nav .hide {
   display: none;
 }
 
@@ -241,21 +243,21 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   justify-content: space-around;
   align-items: center;
 
- }
+}
 
- .nav > ul > li > a {
-    color:  rgba(75, 67, 67, 1);
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 13px;
-    text-decoration: none !important;
-    border-radius: 2px;
-    padding: 5px;
-     }
+.nav > ul > li > a {
+  color:  rgba(75, 67, 67, 1);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none !important;
+  border-radius: 2px;
+  padding: 5px;
+}
 
 .nav > ul > li:hover {
-border-bottom: solid 5px rgba(75, 67, 67, 0.7);
-transition: 0.6s;
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+  transition: 0.6s;
 }
 
 .nav > ul > li:hover a {
@@ -266,17 +268,17 @@ transition: 0.6s;
 /* NAVBAR */
 
 .parallax {
-background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
-height: 500px;
-/* Create the parallax scrolling effect */
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
+  background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
+  height: 500px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 
- /* LIGHTBOX */
+/* LIGHTBOX */
 
 .conteneurproduit {
   display: flex;
@@ -301,136 +303,136 @@ background-size: cover;
 
 
 .lighboxImage {
-    text-align: center;
-    width: 300px;
-    height: 200px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.3s;
-    margin :20px 20px;
+  text-align: center;
+  width: 300px;
+  height: 200px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin :20px 20px;
 }
 
 .lighboxImage:hover {opacity: 0.7;}
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
 }
 
 
 /* Modal Content (image) */
 .modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
 }
 
 /* Caption of Modal Image */
 #caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
 }
 
 /* Add Animation */
 .modal-content, #caption {
-    -webkit-animation-name: zoom;
-    -webkit-animation-duration: 0.6s;
-    animation-name: zoom;
-    animation-duration: 0.6s;
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
 }
 
 @-webkit-keyframes zoom {
-    from {-webkit-transform: scale(0)}
-    to {-webkit-transform: scale(1)}
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
 }
 
 @keyframes zoom {
-    from {transform: scale(0.1)}
-    to {transform: scale(1)}
+  from {transform: scale(0.1)}
+  to {transform: scale(1)}
 }
 
 
 /* The Close Button */
 .close {
-    position: absolute;
-    top: 50px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-  }
+  position: absolute;
+  top: 50px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
 
 .close:hover,
 .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
 }
-  /* LIGHTBOX */
+/* LIGHTBOX */
 
-  section h2{
-text-align: center;
+section h2{
+  text-align: center;
 }
 
 
-  /* FORMULAIRE */
+/* FORMULAIRE */
 
 /*formulaire*/
 .position{
-width: 500px;
-margin-top: 15px;
-text-align: center;
-margin-left: auto;
-margin-right: auto;
+  width: 500px;
+  margin-top: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .position input, textarea{
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .button-formulaire{
-display:block;
-width:150px;
-line-height:50px;
-text-align:center;
-vertical-align:middle;
-background-color: white;
-border-radius: 10px;
-color: black;
-font-size-adjust: auto;
-font-weight: bold;
-margin-left: 180px;
-opacity: 1;
-box-shadow: 10px 5px 5px #4f311c;
+  display:block;
+  width:150px;
+  line-height:50px;
+  text-align:center;
+  vertical-align:middle;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-size-adjust: auto;
+  font-weight: bold;
+  margin-left: 180px;
+  opacity: 1;
+  box-shadow: 10px 5px 5px #4f311c;
 }
 
 .button-formulaire:hover{
-background-color: #4f311c;
-color: white;
+  background-color: #4f311c;
+  color: white;
 }
 
 
 h2 {
-margin-top: 20px;
-font-family: 'Merriweather', serif;
+  margin-top: 20px;
+  font-family: 'Merriweather', serif;
 }
 
 
@@ -438,101 +440,131 @@ font-family: 'Merriweather', serif;
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
+  .modal-content {
+    width: 100%;
+  }
 }
+
 /* FORMULAIRE */
 
-  /* MAP & HORAIRES */
+/* MAP & HORAIRES */
 
 /*horaires*/
 .titre{
-text-align: center;
-width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 section {
-/*
-background-color: #222;
-*/
-display: flex;
-justify-content:center;
+  /*
+  background-color: #222;
+  */
+  display: flex;
+  justify-content:center;
 }
 
 .wrapper {
-display: inherit;
-flex-wrap: wrap;
-justify-content:center;
-align-items: flex-start;>>>>>>> dev
-padding: 20px;
-width: 80%;
-background-color: white;
+  display: inherit;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: flex-start;>>>>>>> dev
+  padding: 20px;
+  width: 80%;
+  background-color: white;
 }
 
 .map {
-width: 600px;
-flex-basis: auto;
-flex-grow: 0;
-flex-shrink: 0;
+  width: 600px;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .address {
-width: 360px;
-height: 410px;
-text-align: center;
-padding: 20px;
-margin: 20px;
-border: 3px;
-border-style: solid;
-border-color: #eee;
-border-radius: 10px;
+  width: 360px;
+  height: 410px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  border: 3px;
+  border-style: solid;
+  border-color: #eee;
+  border-radius: 10px;
 }
-  /* MAP & HORAIRES */
+/* MAP & HORAIRES */
 
 /*footer*/
 footer {
-width: 100%;
-z-index: 1;
-background-color: #ccbdb9;
+  width: 100%;
+  z-index: 1;
+  background-color: #ccbdb9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: top;
+  justify-content: center;
+  padding: 0;
 }
 
-footer div ul{
+footer ul {
+  flex-direction: row;
   text-align: center;
+  align-items: center;
+  padding: 0;
+  padding-top: 20px;
 }
 
-
-footer div ul li {
-padding-top: 20px;
-margin-left: 50px;
-list-style: none;
+footer ul li {
+  list-style: none;
 }
 
 /*footer réseaux sociaux*/
-footer div ul li a {
-color: black;
-cursor: pointer;
+footer ul li a {
+  color: black;
+  cursor: pointer;
+}
+
+.social {
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social3 {
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.social > ul > li {
+  padding: 5px;
 }
 
 /*footer §*/
-footer div p{
+footer p{
   text-align: center;
 }
 
-footer div p a{
+footer p a{
   text-align: center;
   color: black;
 }
 
 /*n° de téléphone cliquable*/
 .mobilesOnly {
-    visibility:hidden;
- }
+  visibility:hidden;
+}
 
 /*image*/
-.img {
+.img-footer {
   overflow:hidden;
-   border-radius:150px;
-   width:37px;
-   height:37px;
+  border-radius:150px;
+  width:37px;
+  height:37px;
 }

@@ -61,11 +61,12 @@ $(document).scroll(function(){ // écoute quand on scroll
 	if($(window).scrollTop() > 225){
 		$('.nav').fadeIn(1000);
 		$('.nav').removeClass('pasla');
-		/*
 		$('.nav').addClass('displayflex');
+		/*
 		*/
 	} else {
 		$('.nav').addClass('pasla');
+		$('.nav').removeClass('displayflex');
 		$('.nav').fadeOut(1000);
 	}
 
@@ -74,8 +75,4 @@ $(document).scroll(function(){ // écoute quand on scroll
 	  $('.nav').addClass('pasla');
   }
   */
-
- /*
-$('.nav').removeClass('displayflex');
-*/
 });

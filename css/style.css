@@ -295,16 +295,7 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   background-size: cover;
 
 }
-.parallax3 {
-  background-image: url("http://www.bakespace.com/images/large/5d79070cf21b2f33c3a1dd4336cb27d2.jpeg");
-  height: 390px;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
-}
 
 /* PARAGRAPhE */
 

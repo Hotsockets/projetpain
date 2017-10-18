@@ -27,27 +27,17 @@ overlay.addEventListener('click', function(e) {
 });
 
 
+
+
 $(document).scroll(function(){ // écoute quand on scroll
 
-	// Valeur en Px de la position actuelle du navigateur
+	 // Valeur en Px de la position actuelle du navigateur
 	if($(window).scrollTop() > 225){
 		$('.nav').fadeIn(1000);
-		$('.nav').removeClass('pasla');
-		/*
-		$('.nav').addClass('displayflex');
-		*/
+		$('.nav').removeClass('hide');
 	} else {
-		$('.nav').addClass('pasla');
+		$('.nav').addClass('hide');
 		$('.nav').fadeOut(1000);
 	}
 
-	/*
-	if ($(window).toggleClass('.hamburger-content')){
-	  $('.nav').addClass('pasla');
-  }
-  */
-
- /*
-$('.nav').removeClass('displayflex');
-*/
 });

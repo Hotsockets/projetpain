@@ -16,7 +16,7 @@ button.addEventListener('keydown', function(e) {
 	if (this.parentNode.classList.contains(activatedClass))
 	{
 		if (e.repeat === false && e.which === 27)
-		this.parentNode.classList.remove(activatedClass);
+			this.parentNode.classList.remove(activatedClass);
 	}
 });
 
@@ -27,17 +27,22 @@ overlay.addEventListener('click', function(e) {
 });
 
 
-
-
 $(document).scroll(function(){ // écoute quand on scroll
 
-	 // Valeur en Px de la position actuelle du navigateur
+	// Valeur en Px de la position actuelle du navigateur
 	if($(window).scrollTop() > 225){
 		$('.nav').fadeIn(1000);
-		$('.nav').removeClass('hide');
+		$('.nav').removeClass('pasla');
+		/*
+		*/
 	} else {
-		$('.nav').addClass('hide');
+		$('.nav').addClass('pasla');
 		$('.nav').fadeOut(1000);
 	}
 
+	/*
+	if ($(window).toggleClass('.hamburger-content')){
+	  $('.nav').addClass('pasla');
+  }
+  */
 });

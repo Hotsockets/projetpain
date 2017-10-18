@@ -27,6 +27,34 @@ overlay.addEventListener('click', function(e) {
 });
 
 
+  <!--LIGHTBOX -->
+var modal = document.getElementById('myModal');
+
+document
+  .querySelectorAll('.lighboxImage')
+  .forEach(function(el){
+    el.onclick = function(){
+        modal
+          .style
+          .display = "block";
+
+        document
+          .getElementById("img01")
+          .src = this.src;
+
+        document.getElementById("caption").innerHTML = this.alt;
+    }
+  });
+
+// When the user clicks on <span> (x), close the modal
+ document
+  .getElementsByClassName("modal")[0]
+  .onclick = function() {
+		if (document.getElementsByClassName)
+    modal.style.display = "none";
+}
+
+
 $(document).scroll(function(){ // écoute quand on scroll
 
 	// Valeur en Px de la position actuelle du navigateur
@@ -34,7 +62,6 @@ $(document).scroll(function(){ // écoute quand on scroll
 		$('.nav').fadeIn(1000);
 		$('.nav').removeClass('pasla');
 		/*
-		$('.nav').addClass('displayflex');
 		*/
 	} else {
 		$('.nav').addClass('pasla');
@@ -46,8 +73,4 @@ $(document).scroll(function(){ // écoute quand on scroll
 	  $('.nav').addClass('pasla');
   }
   */
-
- /*
-$('.nav').removeClass('displayflex');
-*/
 });

@@ -29,16 +29,25 @@ overlay.addEventListener('click', function(e) {
 
 $(document).scroll(function(){ // écoute quand on scroll
 
-	 // Valeur en Px de la position actuelle du navigateur
+	// Valeur en Px de la position actuelle du navigateur
 	if($(window).scrollTop() > 225){
 		$('.nav').fadeIn(1000);
-		$('.nav').removeClass('hide');
-	}
-	if ($(window).toggleClass('.hamburger-content')){
-				$('.nav').addClass('hide');
-		}else {
-		$('.nav').addClass('hide');
+		$('.nav').removeClass('pasla');
+		/*
+		$('.nav').addClass('displayflex');
+		*/
+	} else {
+		$('.nav').addClass('pasla');
 		$('.nav').fadeOut(1000);
 	}
 
+	/*
+	if ($(window).toggleClass('.hamburger-content')){
+	  $('.nav').addClass('pasla');
+  }
+  */
+
+ /*
+$('.nav').removeClass('displayflex');
+*/
 });

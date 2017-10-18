@@ -138,6 +138,9 @@ header {
   #hamburger-content {
     display: none;
   }
+  .nav .pasla {
+    display: none;
+  }
 
   #hamburger-button, #hamburger-sidebar,
   .hamburger-activated #hamburger-overlay {
@@ -202,8 +205,8 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
 .nav {
   position: fixed;
+  display: none;
   top: 0;
-  display: flex;
   justify-content: center;
   width: 80%;
   margin-left: 10%;
@@ -221,7 +224,12 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   color: black;
 }
 
-.nav .hide {
+.displayflex {
+  display: flex;
+}
+
+
+.nav .pasla {
   display: none;
 }
 

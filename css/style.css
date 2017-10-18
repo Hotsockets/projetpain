@@ -277,14 +277,68 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
 .parallax {
   background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
-  height: 500px;
+  height: 390px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+.parallax2 {
+  background-image: url("https://www.bakewithzing.com/sites/default/files/french%20baguette%20recipe%20classes.jpg");
+  height: 390px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.parallax3 {
+  background-image: url("http://www.bakespace.com/images/large/5d79070cf21b2f33c3a1dd4336cb27d2.jpeg");
+  height: 390px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
+/* PARAGRAPhE */
+
+
+section.baltha {
+margin-top: 200px;
+margin-bottom: 200px;
+background-color: #fff;
+}
+
+
+.loremimage img {
+width : 100%;
+height: auto;
+}
+
+.loremipsum {
+  font-size: 15px;
+}
+
+.loremipsum h3 {
+  text-align: center;
+}
+
+.loremipsum p{
+  vertical-align: center;
+  text-align: justify;
+}
+
+
+
+
+
+/* PARAGRAPhE */
 
 /* LIGHTBOX */
 
@@ -503,34 +557,43 @@ section {
 
 /*footer*/
 footer {
-  width: 100%;
   z-index: 1;
-  background-color: #ccbdb9;
   display: flex;
   flex-direction: column;
   align-items: center;
   vertical-align: top;
   justify-content: center;
-  padding: 0;
+  padding: 100px 0 100px;
+  background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/36/breads-1761272_960_720.jpg');
+  background-position: center;
+  background-size: cover;
 }
-
 footer ul {
   flex-direction: row;
   text-align: center;
   align-items: center;
-  padding: 0;
   padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-footer ul li {
-  list-style: none;
+footer ul li{
+    list-style: none;
+  padding: 0 12px 0 12px;
 }
-
 /*footer réseaux sociaux*/
 footer ul li a {
-  color: black;
+  text-align: center;
+  font-size: 21px;
   cursor: pointer;
+  color: white;
 }
+
+footer p{
+  text-align: center;
+  font-size: 21px;
+  color: white;
+}
+
 
 .social {
   display: inherit;
@@ -554,19 +617,12 @@ footer ul li a {
   padding: 5px;
 }
 
-/*footer §*/
-footer p{
-  text-align: center;
-}
-
-footer p a{
-  text-align: center;
-  color: black;
-}
-
 /*n° de téléphone cliquable*/
 .mobilesOnly {
-  visibility:hidden;
+    color: white;
+}
+.mobilesOnly a{
+  color: white;
 }
 
 /*image*/

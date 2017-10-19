@@ -287,113 +287,117 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
 
 
 /* LIGHTBOX */
-
-.conteneurproduit {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+.modal-dialog {
+  width: 80%;
+  height: auto;
+  max-height: 1000px;
 }
 
-.ficheproduit {
-  width: 350px;
+.modal-content{
+  width: 1400px;
+  height: 730px;
+
+}
+
+.plus{
+  width:1000px;
+  height: 650px;
+}
+
+.lightBox{
+  width: 400px;
   height: 300px;
-  display: inherit;
-  flex-direction: column;
+  border-color: white;
+  background-color: white;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.lightBox:hover{
+  background-color: white;
+  border-color: white;
+}
+
+.lightBox:active{
+  background-color: white;
+  border-color: white;
+}
+
+.btn-primary:active:hover{
+  background-color: white;
+  border-color: white;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.row1{
+  width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.paquet2{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
   justify-content: center;
 }
 
-
-.ficheproduit p {
-  font-size: 20px;
-  text-align: center;
+.prod{
+   margin-top: 15px;
+  /*margin-bottom: 15px;*/
+  /*margin-left: 8px;
+  margin-right: 8px;*/
 }
 
-
-
-.lighboxImage {
-  text-align: center;
-  width: 300px;
-  height: 200px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-  margin :20px 20px;
+.prod-top{
+  width: 800px;
+  height: 600px;
 }
 
-.lighboxImage:hover {opacity: 0.7;}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+.prod-photo{
+  width: 800px;
+  height: 620px;
+  border-color: white;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px grey;
 }
 
-
-/* Modal Content (image) */
-.modal-content {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
+.prod-photo:hover{
+  background-color: white;
+  border-color: white;
 }
 
-/* Caption of Modal Image */
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+.prod-photo:active{
+  background-color: white;
+  border-color: white;
 }
 
-/* Add Animation */
-.modal-content, #caption {
-  -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
-  animation-name: zoom;
-  animation-duration: 0.6s;
+.btn-primary:active:hover{
+  background-color: white;
+  border-color: white;
 }
 
-@-webkit-keyframes zoom {
-  from {-webkit-transform: scale(0)}
-  to {-webkit-transform: scale(1)}
+@media only screen and (max-width: 900px){
+   .paquet2{
+      flex-wrap: wrap;
+  }
+  .prod-photo{
+    width: 400px;
+    height: 300px;
+    justify-content: center;
+  }
 }
 
-@keyframes zoom {
-  from {transform: scale(0.1)}
-  to {transform: scale(1)}
-}
-
-
-/* The Close Button */
-.close {
-  position: absolute;
-  top: 50px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.close:hover,
-.close:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
-}
 /* LIGHTBOX */
 
 section h2{

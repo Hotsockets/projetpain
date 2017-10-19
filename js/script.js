@@ -28,7 +28,7 @@ overlay.addEventListener('click', function(e) {
 
 
   <!--LIGHTBOX -->
-var modal = document.getElementById('myModal');
+/*-var modal = document.getElementById('myModal');
 
 document
   .querySelectorAll('.lighboxImage')
@@ -52,7 +52,7 @@ document
   .onclick = function() {
 		if (document.getElementsByClassName)
     modal.style.display = "none";
-}
+}*/
 
 
 $(document).scroll(function(){ // écoute quand on scroll

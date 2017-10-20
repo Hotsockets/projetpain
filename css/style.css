@@ -40,6 +40,16 @@ header {
   color: #333;
 }
 
+/* hover barre grise
+#hamburger-content ul > li:hover {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+  transition: 0.6s;
+}
+#hamburger-content > ul > li:hover a {
+  padding-bottom: 0;
+  transition: 0.6s;
+}
+*/
 
 #hamburger, #hamburger-content {
 
@@ -95,7 +105,7 @@ header {
   color: black;
 }
 #hamburger-sidebar-header {
-  background: url("#") center;
+  background: url("http://www.lepaindepapou.fr/img/photos/zoom/accueil-001.jpg") center;
   background-size: cover;
   height: 128px;
 }
@@ -132,7 +142,14 @@ header {
   line-height: inherit;
   padding: 10px;
 }
-
+#hamburger-sidebar-body .dropdown {
+  padding-bottom: 40px;
+  margin-left: 25px;
+}
+#hamburger-sidebar-body .dropdown-menu {
+  position: relative;
+  
+}
 @media screen and (max-width: 1024px) {
   #hamburger-content {
     display: none;
@@ -266,7 +283,7 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   transition: 0.6s;
 }
 
-.nav > ul > li:hover a {
+.nav > ul > li:hover a  {
   padding-bottom: 0;
   transition: 0.6s;
 }

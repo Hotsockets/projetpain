@@ -58,15 +58,15 @@
   <section class="position">
     <h2>Nous contacter</h2>
     <p id="contactus">Envoyer-nous un mail si vous avez des questions et/ou des suggestions.</p>
-    <form method="post" action="blog">
-      <input type="text" name="Nom" placeholder="Tapez votre nom" size="60" maxlength="40">
-      <input type=text name="Prénom" placeholder="Tapez votre prénom" size="60" maxlength="40">
-      <input type="text" name="Sujet" placeholder="Sujet du mail" size="60" maxlength="40">
-      <textarea name="message" placeholder="Objet" rows="10" cols="60"></textarea>
-      <button class="button-formulaire">Envoi</button>
+    <form><!-- method="post" action="email" -->
+      <input type="text" id="name" name="name" placeholder="Nom et prénom" size="60" maxlength="40">
+      <input type="text" id="email" name="subject" placeholder="Adresse e-mail" size="60" maxlength="40">
+      <input type="text" id="subject" name="subject" placeholder="Sujet" size="60" maxlength="40">
+      <textarea id="message" name="message" placeholder="Message" rows="10" cols="60"></textarea>
+      <button class="button-formulaire" id="envoi">Envoi</button>
+      <div id="statut"></div>
     </form>
   </section>
-
 
   <section class="carte">
     <div class="wrapper">
@@ -124,6 +124,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/formulaire.js"></script>
+  <script type="text/javascript" src="js/sendmail.js"></script>
 
 </body>
 

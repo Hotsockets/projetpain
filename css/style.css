@@ -40,19 +40,21 @@ header {
   color: #333;
 }
 
-/* hover barre grise
-#hamburger-content ul > li:hover {
+#hamburger-content ul > li:hover > a {
   border-bottom: solid 5px rgba(75, 67, 67, 0.7);
   transition: 0.6s;
 }
-#hamburger-content > ul > li:hover a {
-  padding-bottom: 0;
+#hamburger-content .dropdown-menu li:hover a {
+  border-bottom : solid 0px rgba(0, 0, 0, 0);
+}
+#hamburger-sidebar ul > li:hover > a {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
   transition: 0.6s;
 }
-*/
-
+#hamburger-sidebar .dropdown-menu li:hover a {
+  border-bottom : solid 0px rgba(0, 0, 0, 0);
+}
 #hamburger, #hamburger-content {
-
   display: inline;
 }
 
@@ -148,7 +150,9 @@ header {
 }
 #hamburger-sidebar-body .dropdown-menu {
   position: relative;
-  
+  float: right;
+  padding-right: 70px;
+
 }
 @media screen and (max-width: 1024px) {
   #hamburger-content {
@@ -229,7 +233,15 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   margin-right: 10%;
   z-index: 1000;
 }
+.dropdown-toggle:hover {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+  padding-bottom: 1px;
+  transition: 0.6s;
+}
+.dropdown-toggle:hover a {
 
+  transition: 0.6s;
+}
 .dropdown a {
   background-color: white;
   border: none;
@@ -596,7 +608,9 @@ footer {
   background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/36/breads-1761272_960_720.jpg');
   background-position: center;
   background-size: cover;
+  background-color: rgba(0, 0, 0, 0.5);
 }
+
 footer ul {
   flex-direction: row;
   text-align: center;

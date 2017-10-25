@@ -238,10 +238,10 @@ box-shadow: 0 6px 12px rgba(0,0,0,.175);
   padding-bottom: 1px;
   transition: 0.6s;
 }
-.dropdown-toggle:hover a {
-
-  transition: 0.6s;
+.nav .dropdown-toggle:hover {
+  border-bottom: none;
 }
+
 .dropdown a {
   background-color: white;
   border: none;
@@ -336,6 +336,8 @@ background-color: #fff;
 .loremimage img {
 width : 100%;
 height: auto;
+border-radius:20px;
+box-shadow: 5px 5px 5px grey;
 }
 
 .loremipsum h3 {
@@ -353,7 +355,7 @@ height: auto;
   padding-bottom: 60px;
   font-size: 30px;
   font-weight: bold;
-  text-shadow: 1px 2px 8px;
+  text-shadow: 3px 3px 2px grey;
   text-align: center;
 }
 
@@ -493,6 +495,9 @@ section h2{
   text-align: center;
 }
 
+body{
+  font-size: 15px;
+}
 
 /* FORMULAIRE */
 
@@ -528,9 +533,6 @@ section h2{
   box-shadow: 10px 5px 5px #4f311c;
 }
 
-
-
-
 h2 {
   margin-top: 20px;
   font-family: 'Merriweather', serif;
@@ -539,7 +541,10 @@ h2 {
 .infospratiques p {
   text-align: center;
 }
-
+.infospratiques2{
+  text-align: center;
+  margin: 50px;
+}
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px){
@@ -570,7 +575,7 @@ h2 {
   display: inherit;
   flex-wrap: wrap;
   justify-content:center;
-  align-items: flex-start;>>>>>>> dev
+  align-items: flex-start;
   padding: 20px;
   width: 80%;
   background-color: white;
@@ -594,6 +599,16 @@ h2 {
   border-color: #eee;
   border-radius: 10px;
 }
+
+@media only screen and (max-width: 700px){
+  .map {
+    width: 100px;
+  }
+  .position{
+    width: 250px;
+  }
+}
+
 /* MAP & HORAIRES */
 
 /*footer*/
@@ -604,7 +619,7 @@ footer {
   align-items: center;
   vertical-align: top;
   justify-content: center;
-  padding: 100px 0 100px;
+  /*padding: 100px 0 100px;*/
   background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/36/breads-1761272_960_720.jpg');
   background-position: center;
   background-size: cover;
@@ -631,12 +646,15 @@ footer ul li a {
   color: white;
 }
 
+footer ul li a:hover{
+  color:white;
+}
+
 footer p{
   text-align: center;
   font-size: 21px;
   color: white;
 }
-
 
 .social {
   display: inherit;
@@ -674,4 +692,14 @@ footer p{
   border-radius:150px;
   width:37px;
   height:37px;
+}
+
+@media only screen and (max-width: 700px){
+  footer{
+    background-image: none;
+    background-color: white;
+  }
+  footer ul li a{
+    color: black;
+  }
 }

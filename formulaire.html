@@ -63,6 +63,10 @@
       <input type="text" id="email" name="subject" placeholder="Adresse e-mail" size="60" maxlength="40">
       <input type="text" id="subject" name="subject" placeholder="Sujet" size="60" maxlength="40">
       <textarea id="message" name="message" placeholder="Message" rows="10" cols="60"></textarea>
+      <!-- Notre boite de vérification -->
+         <div class="g-recaptcha"
+         data-sitekey="6LeuNQITAAAAAPGRU7dkrCPIrrR64WPvzMc7pn6Z">
+         </div>
       <button class="button-formulaire" id="envoi">Envoi</button>
       <div id="statut"></div>
     </form>
@@ -71,11 +75,11 @@
   <section class="carte">
     <div class="wrapper">
       <div class="titre"><h2>Coordonnées</h2></div>
-      <div class="map">
+      <div class="map col-md-6 col-xs-12">
         <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyATcbvaAwSAIjAyjQxplevI6OiS01Yo8RQ&q=11+rue+de+Poissy,Paris+France" allowfullscreen>
         </iframe>
       </div>
-      <div class="infospratiques">
+      <div class="infospratiques col-md-6 col-xs-12">
         <h2>Adresse :</h2>
         <p>11 rue de Poissy<br>75005 Paris</p>
         <h2>Horaires :</h2>
@@ -92,9 +96,11 @@
     </div>
   </section>
 
-  <section class="infospratiques">
+  <section class="infospratiques2">
     <h2>Accès PMR</h2>
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed deiusmod tempor incididunt ut labore et dolore magna aliqua.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p> En vue de la loi du 11 février 2005, nous avons mis en place tous les dispositifs pour rendre la boutique accesible à tous
+      (Rampe d'accès, Repérage Podotactile, Porte automatisée, ...). N'hésitez pas à demander de l'aide aux vendeuses qui seront toujours
+      heureuses de vous rendre service.  </p>
   </section>
 
   <footer>
@@ -124,6 +130,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/formulaire.js"></script>
   <script type="text/javascript" src="js/sendmail.js"></script>
+   <script src="https://www.google.com/recaptcha/api.js"></script>
 
 </body>
 

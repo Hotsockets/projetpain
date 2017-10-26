@@ -3,6 +3,19 @@ var router = express.Router();
 
 const mymailer = require("nodemailer");
 
+router.get('/' ,function(req, res, next){
+  res.render('index')
+});
+
+router.get('/contact' ,function(req, res, next){
+  res.render('formulaire')
+});
+
+router.get('/produits' ,function(req, res, next){
+  res.render('produits')
+});
+
+
 // Création de la méthode de transport de l'email
 var transport = mymailer.createTransport({
   host: "smtp.mailtrap.io",
@@ -35,9 +48,9 @@ router.post('/sendamail', function(req, res, next) {
 
 });
 
-router.get('/:myfilename', function(req, res, next) {
-  //res.render('index', { title: 'Express' });
-  res.sendFile('/'+req.params.myfilename);
-});
+// // router.get('/:myfilename', function(req, res, next) {
+//   //res.render('index', { title: 'Express' });
+//   res.sendFile('/'+req.params.myfilename);
+// });
 
 module.exports = router;

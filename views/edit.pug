@@ -1,0 +1,16 @@
+extends layout
+
+append head
+  link(rel='stylesheet', href='/css/edit.css')
+
+block content
+  hr
+  #descr.editable Mon test description
+  hr
+  p.editable
+    | Tout le monde connaît le métier de boulanger.
+  hr
+  form(action='/modifproduit', method='post')
+    textarea(name='description_produit', rows='10', cols='80') Ma description
+    button(type='button', name='submit') Modifier cette description
+  script(type='text/javascript', src='/js/edit.js')

@@ -24,6 +24,110 @@ CREATE DATABASE /*!32312 IF NOT EXISTS*/ `pain` /*!40100 DEFAULT CHARACTER SET l
 USE `pain`;
 
 --
+-- Table structure for table `categories`
+--
+
+DROP TABLE IF EXISTS `categories`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `categories` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `category` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `category_UNIQUE` (`category`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `categories`
+--
+
+LOCK TABLES `categories` WRITE;
+/*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (1,'pain'),(3,'pâtisserie'),(2,'viennoiserie');
+/*!40000 ALTER TABLE `categories` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ingredients`
+--
+
+DROP TABLE IF EXISTS `ingredients`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ingredients` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ingredient` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `ingredient_UNIQUE` (`ingredient`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ingredients`
+--
+
+LOCK TABLES `ingredients` WRITE;
+/*!40000 ALTER TABLE `ingredients` DISABLE KEYS */;
+INSERT INTO `ingredients` VALUES (2,'cacao'),(1,'farine de blé');
+/*!40000 ALTER TABLE `ingredients` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `is_a`
+--
+
+DROP TABLE IF EXISTS `is_a`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `is_a` (
+  `id_prod` int(11) NOT NULL,
+  `id_cat` int(11) NOT NULL,
+  PRIMARY KEY (`id_prod`,`id_cat`),
+  KEY `fk_cat_idx` (`id_cat`),
+  CONSTRAINT `fk_cat` FOREIGN KEY (`id_cat`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_prod` FOREIGN KEY (`id_prod`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `is_a`
+--
+
+LOCK TABLES `is_a` WRITE;
+/*!40000 ALTER TABLE `is_a` DISABLE KEYS */;
+INSERT INTO `is_a` VALUES (5,1);
+/*!40000 ALTER TABLE `is_a` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `ismadeof`
+--
+
+DROP TABLE IF EXISTS `ismadeof`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `ismadeof` (
+  `idproduct` int(11) NOT NULL,
+  `idingredient` int(11) NOT NULL,
+  PRIMARY KEY (`idproduct`,`idingredient`),
+  KEY `fk_ingredient_idx` (`idingredient`),
+  CONSTRAINT `fk_id` FOREIGN KEY (`idproduct`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_ingredient` FOREIGN KEY (`idingredient`) REFERENCES `ingredients` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `ismadeof`
+--
+
+LOCK TABLES `ismadeof` WRITE;
+/*!40000 ALTER TABLE `ismadeof` DISABLE KEYS */;
+INSERT INTO `ismadeof` VALUES (5,1),(5,2);
+/*!40000 ALTER TABLE `ismadeof` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `products`
 --
 
@@ -35,6 +139,7 @@ CREATE TABLE `products` (
   `name` varchar(45) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `picture` varchar(45) DEFAULT NULL,
+  `category` int(11) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -45,7 +150,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (5,'fd','Mon test description','louvremini1.png');
+INSERT INTO `products` VALUES (5,'fd','Mon test description','louvremini1.png',0);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -58,4 +163,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-30 11:21:52
+-- Dump completed on 2017-10-30 11:47:39

@@ -83,10 +83,7 @@ DROP TABLE IF EXISTS `is_a`;
 CREATE TABLE `is_a` (
   `id_prod` int(11) NOT NULL,
   `id_cat` int(11) NOT NULL,
-  PRIMARY KEY (`id_prod`,`id_cat`),
-  KEY `fk_cat_idx` (`id_cat`),
-  CONSTRAINT `fk_cat` FOREIGN KEY (`id_cat`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_prod` FOREIGN KEY (`id_prod`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`id_prod`,`id_cat`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -110,10 +107,7 @@ DROP TABLE IF EXISTS `ismadeof`;
 CREATE TABLE `ismadeof` (
   `idproduct` int(11) NOT NULL,
   `idingredient` int(11) NOT NULL,
-  PRIMARY KEY (`idproduct`,`idingredient`),
-  KEY `fk_ingredient_idx` (`idingredient`),
-  CONSTRAINT `fk_id` FOREIGN KEY (`idproduct`) REFERENCES `products` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_ingredient` FOREIGN KEY (`idingredient`) REFERENCES `ingredients` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  PRIMARY KEY (`idproduct`,`idingredient`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -123,7 +117,6 @@ CREATE TABLE `ismadeof` (
 
 LOCK TABLES `ismadeof` WRITE;
 /*!40000 ALTER TABLE `ismadeof` DISABLE KEYS */;
-INSERT INTO `ismadeof` VALUES (5,1),(5,2);
 /*!40000 ALTER TABLE `ismadeof` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -140,9 +133,9 @@ CREATE TABLE `products` (
   `description` varchar(255) DEFAULT NULL,
   `ingredients` varchar(255) DEFAULT NULL,
   `picture` varchar(255) DEFAULT NULL,
-  `category` varchar(255) NOT NULL,
+  `category` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,8 +144,33 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (5,'fd','Mon test description','louvremini1.png',0);
+INSERT INTO `products` VALUES (23,'22crfer','vvrvrcecr','rvrecre','pompimini1.png','ccvsdecccecrecrere');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `users`
+--
+
+DROP TABLE IF EXISTS `users`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `users` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `login` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `users`
+--
+
+LOCK TABLES `users` WRITE;
+/*!40000 ALTER TABLE `users` DISABLE KEYS */;
+INSERT INTO `users` VALUES (1,'admin','admin');
+/*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -164,4 +182,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-30 11:47:39
+-- Dump completed on 2017-10-31 14:50:40

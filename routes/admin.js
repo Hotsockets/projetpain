@@ -34,7 +34,7 @@ router.get('/create-product', function(req, res, next) {
 // POST /admin/create-product
 router.post('/create-product', upload.single('product_picture'), function(req, res, next) {
 	console.log(req.body);
-	if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpg')) {
+	if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg')) {
 		fs.rename(req.file.path,'public/images/'+req.file.originalname);
 		// Ajouter un produit dans la table 'products'
 		connection.query('insert into products values(null, ?, ?, ?, ?, ?);',
@@ -75,13 +75,11 @@ router.get('/modify', function(req, res, next) {
 });
 
 router.post('/modify', upload.single('product_picture'), function(req, res){
-	console.log(req.body);
+	console.log(req.file);
 	console.log(req.body.product_picture);
-	if (req.body.product_picture == ''){
-		console.log("Pas de changement d'image");
-	} else {
-
-		if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpg')) {
+	if (req.file){
+		console.log(req.body.product_picture);
+		if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg')) {
 			fs.rename(req.file.path,'public/images/'+req.file.originalname);
 		} else {
 			res.send('Vous avez fait une erreur dans le téléchargement')

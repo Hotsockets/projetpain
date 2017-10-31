@@ -3,12 +3,9 @@ var router = express.Router();
 
 const mysql = require('mysql');
 
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : 'm1n2b3V-4',
-	database : 'pain'
-});
+const config = require('../config.js');
+
+const connection = mysql.createConnection(config);
 
 connection.connect();
 

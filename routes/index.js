@@ -2,15 +2,12 @@ var express = require('express');
 var router = express.Router();
 const mysql = require('mysql');
 const mymailer = require("nodemailer");
+const config = require('../config.js');
 
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : 'm1n2b3V-4',
-	database : 'pain'
-});
+const connection = mysql.createConnection(config);
 
 connection.connect();
+
 
 router.get('/' ,function(req, res, next){
   res.render('index')

@@ -4,14 +4,9 @@ const mysql = require('mysql');
 const multer  = require('multer');
 const fs = require('fs');
 const upload = multer({ dest: 'tmp/' });
-//const config = require('config.js');
+const config = require('../config.js');
 
-var connection = mysql.createConnection({
-	host     : 'localhost',
-	user     : 'root',
-	password : 'm1n2b3V-4',
-	database : 'pain'
-});
+const connection = mysql.createConnection(config);
 
 connection.connect();
 

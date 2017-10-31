@@ -22,3 +22,6 @@ form(method="POST" enctype="multipart/form-data" action='/admin/modify?idProduit
 	br
 	br
 	button(type="submit") Enregistrer
+script(src='https://cloud.tinymce.com/stable/tinymce.min.js')
+script.
+	tinymce.init({ selector:'textarea' });

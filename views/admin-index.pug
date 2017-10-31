@@ -1,27 +1,29 @@
-a(href="/admin/create-product") Ajouter un produit
+extends layout
 
-br 
-br 
+block content
+	a(href="/admin/create-product") Ajouter un produit
 
-table(border="1" width="100%")
-	tr
-		th #
-		th name 
-		th description
-		th ingrédients
-		th image
-		th category
-		th action
-	each product in products
+	br 
+	br 
+
+	table(border="1" width="100%")
 		tr
-			td= product.id
-			td= product.name
-			td= product.description  
-			td= product.ingredients
-			td 
-				img(src="/images/" + product.picture height="50")
-			td= product.category
-			td 
-				a(href="/admin/delete-product?id=" + product.id) Supprimer
-			td 
-				a(href="/admin/modify?id=" + product.id) Modifier
+			th #
+			th name 
+			th description
+			th ingrédients
+			th image
+			th category
+			th action
+		each product in products
+			tr
+				td= product.id
+				td= product.name
+				td= product.description  
+				td= product.ingredients
+				td 
+					img(src="/images/" + product.picture height="50")
+				td= product.category
+				td 
+					a(href="/admin/delete-product?id=" + product.id onlick="return confirm('Voulez-vous vraiment supprimer ce produit?');" class="btn btn-warning") Supprimer
+					a(href="/admin/modify?id=" + product.id class="btn btn-info") Modifier 

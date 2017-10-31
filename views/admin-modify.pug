@@ -1,27 +1,29 @@
-form(method="POST" enctype="multipart/form-data" action='/admin/modify?idProduit='+ product.id)
-	h1 Modifier un produit
-	p Nom du produit :
-	input(type="text" name="product_name" placeholder="Nom du produit" value= product.name)
-	br
-	br
-	p Ingrédients :
-	input(type="text" name="ingredients" placeholder="Ingredients" value= product.ingredients)
-	br
-	br
-	p Description
-	textarea(name="product_description" placeholder="Description du produit" rows='6' cols='50')=  product.description
-	br
-	br
-	p Photo
-	img(src= "/images/" +product.picture)
-	input(type="file" name="product_picture")
-	br
-	br
-	p Catégorie
-	input(type="text" name="category" placeholder="Catégorie" value= product.category)
-	br
-	br
-	button(type="submit") Enregistrer
-script(src='https://cloud.tinymce.com/stable/tinymce.min.js')
-script.
-	tinymce.init({ selector:'textarea' });
+extends layout
+
+block content
+
+	form(method="POST" enctype="multipart/form-data" action='/admin/modify?idProduit='+ product.id)
+		h1 Modifier un produit
+		p Nom du produit :
+		input(type="text" name="product_name" placeholder="Nom du produit" value= product.name)
+		br
+		br
+		p Ingrédients :
+		input(type="text" name="ingredients" placeholder="Ingredients" value= product.ingredients)
+		br
+		br
+		p Description
+		textarea(name="product_description" placeholder="Description du produit" rows='6' cols='50')=  product.description
+		br
+		br
+		p Photo
+		img(src= "/images/" +product.picture)
+		input(type="file" name="product_picture")
+		br
+		br
+		p Catégorie
+		input(type="text" name="category" placeholder="Catégorie" value= product.category)
+		br
+		br
+		button(type="submit" onclick="return confirm('Voulez-vous modifier cet élément ?');") Enregistrer
+	

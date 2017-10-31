@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Contact</title>
+</head>
+
+<body>
+  <header>
+    <a href="index.html" id="logo"></a>
+    <div id="hamburger">
+      <div id="hamburger-content">
+        <nav>
+          <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li>
+              <div class="dropdown">
+                <a class="btn btn-default dropdown-toggle" id="menu1" data-toggle="dropdown">Produits<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="produits.html">Pain</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="produits.html">Viennoiseries</a></li>
+                  <li role="presentation"><a role="menuitem" tabindex="-1" href="produits.html">Patisseries</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="formulaire.html">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <button id="hamburger-button">&#9776;</button>
+      <div id="hamburger-sidebar">
+        <div id="hamburger-sidebar-header"></div>
+        <div id="hamburger-sidebar-body"></div>
+      </div>
+      <div id="hamburger-overlay"></div>
+    </div>
+  </header>
+  <nav class="nav pasla">
+    <ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li>
+      <li>
+        <div class="dropdown">
+          <a class="btn btn-default dropdown-toggle" id="menu1" data-toggle="dropdown">Produits<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="produits.html">Pain</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="produits.html">Viennoiseries</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="produits.html">Patisseries</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="formulaire.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="position">
+    <h2>Nous contacter</h2>
+    <p id="contactus">Envoyer-nous un mail si vous avez des questions et/ou des suggestions.</p>
+    <form><!-- method="post" action="email" -->
+      <input type="text" id="name" name="name" placeholder="Nom et prénom" size="60" maxlength="40">
+      <input type="text" id="email" name="subject" placeholder="Adresse e-mail" size="60" maxlength="40">
+      <input type="text" id="subject" name="subject" placeholder="Sujet" size="60" maxlength="40">
+      <textarea id="message" name="message" placeholder="Message" rows="10" cols="60"></textarea>
+      <!-- Notre boite de vérification -->
+         <div class="g-recaptcha"
+         data-sitekey="6LeuNQITAAAAAPGRU7dkrCPIrrR64WPvzMc7pn6Z">
+         </div>
+      <button class="button-formulaire" id="envoi">Envoi</button>
+      <div id="statut"></div>
+    </form>
+  </section>
+
+  <section class="carte">
+    <div class="wrapper">
+      <div class="titre"><h2>Coordonnées</h2></div>
+      <div class="map col-md-6 col-xs-12">
+        <iframe width="600" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyATcbvaAwSAIjAyjQxplevI6OiS01Yo8RQ&q=11+rue+de+Poissy,Paris+France" allowfullscreen>
+        </iframe>
+      </div>
+      <div class="infospratiques col-md-6 col-xs-12">
+        <h2>Adresse :</h2>
+        <p>11 rue de Poissy<br>75005 Paris</p>
+        <h2>Horaires :</h2>
+        <ul class="horaires" id="horaires">
+          <li>Lundi : 12h - 20h</li>
+          <li>Mardi : 7h - 20h</li>
+          <li>Mercredi : 7h - 20h</li>
+          <li>Jeudi : 7h - 20h</li>
+          <li>Vendredi : 7h - 20h</li>
+          <li>Samedi : 7h - 20h</li>
+          <li>Dimanche : 7h - 13h</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="infospratiques2">
+    <h2>Accès PMR</h2>
+    <p> En vue de la loi du 11 février 2005, nous avons mis en place tous les dispositifs pour rendre la boutique accesible à tous
+      (Rampe d'accès, Repérage Podotactile, Porte automatisée, ...). N'hésitez pas à demander de l'aide aux vendeuses qui seront toujours
+      heureuses de vous rendre service.  </p>
+  </section>
+
+  <footer>
+    <ul>
+      <li><a href="#">Notre maison</a></li>
+      <li><a href="#">Produits</a></li>
+      <li><a href="#">Nous contacter</a></li>
+    </ul>
+    <div>
+      <p class="mobilesOnly">Appeler le <a href="callto:0102030405">0102030405</a><!--Skype --></p>
+      <p>Adresse : 11, rue de Poissy<br>75005 Paris</p>
+    </div>
+    <div class="social">
+      <ul class="social3">
+        <li><a href="http://www.chartequalite-artisanat.com/charte-qualite-artisanat">Charte qualité</a></li>
+        <li><a href="https://www.legifrance.gouv.fr/affichTexte.do?cidTexte=JORFTEXT000000169225&fastPos=2&fastReqId=1752492258&categorieLien=cid&oldAction=rechTexte">Norme hygiène</a></li>
+        <li><a href="#(page.hmtl)"><img class="img-footer" src="images/reseaux/pmr.jpg" alt="PMR"></a></li>
+      </ul>
+      <ul class="social3">
+        <li><a href="http://www.facebook.com"><img class="img-footer" src="images/reseaux/fb.png" alt="FB"></a></li>
+        <li><a href="https://www.instagram.com"><img class="img-footer" src="images/reseaux/insta.jpg" alt="insta"></a></li>
+        <li><a href="https://twitter.com"><img class="img-footer" src="images/reseaux/twitter.jpg" alt="twitter"></a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/formulaire.js"></script>
+  <script type="text/javascript" src="js/sendmail.js"></script>
+   <script src="https://www.google.com/recaptcha/api.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,54 @@
+extends layout
+block content
+
+  .parallax
+  .container
+    section.baltha
+      .row
+        .col-xs-12.col-md-5
+          .loremipsum
+            h2 Mon métier
+            p
+              | Tout le monde connaît le métier de boulanger. Mais pour moi, c'est plus qu'un métier, c'est une passion.
+              | Ce métier est magnifique, malgré les nombreux sacrifices à faire dont celui de se lever très tôt tous les matins. Voir le sourire du client,
+              | lorsqu'il récupère sa baguette bien cuite comme il le souhaite.
+              | De voir le sourire emmerveillé des enfants devant les pâtisseries en vitrine.
+              | Il faut également travailler très dur et ne jamais baisser les bras si on veut avoir du succès auprès des clients pour qu'ils restent fidèles.
+        .col-xs-12.col-md-5.col-md-offset-1
+          .loremimage
+            img(src='images/2.jpg', alt='pain')
+  .parallax2
+  section.baltha
+    .container
+      .row
+        .col-xs-12.col-md-5
+          .loremimage
+            img(src='images/5.jpg', alt='pain')
+        .col-xs-12.col-md-5.col-md-offset-1
+          .loremipsum
+            h2 L'histoire de ma boutique
+            p
+              | J'ai toujours voulu travailler le pain dans le respect des traditions.
+              | J'ai donc placé ce respect dans mon apprentissage en ayant plusieurs expériences au sein de différentes boulangeries.
+              | Dès que j'ai pu m'installer, je me suis lancé.
+              | J'ai pu réaliser mon rêve et j'ai ouvert ma boutique il y a maintenant deux ans.
+      .row
+        .col-xs-12
+          p.citation
+            | "Nous traitons la pâte pour lui donner un goût délicieux,
+            br
+            |  comme si notre vie en dépendait."
+        .col-xs-12
+          h3.lesproduits Découvrez nos produits
+      .row
+        .col-md-4.col-xs-12(class='produitcentréresponsive')
+          a(href='produits.html')
+            img.imgproduit(src='http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg', alt='pain')
+        .col-md-4.col-xs-12(class='produitcentréresponsive')
+          a(href='produits.html')
+            img.imgproduit(src='images/pat19.jpg', alt='pain')
+        .col-md-4.col-xs-12(class='produitcentréresponsive')
+          a(href='produits.html')
+            img.imgproduit(src='images/vien6.jpg', alt='pain')
+
+  

@@ -138,8 +138,9 @@ CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `picture` varchar(45) DEFAULT NULL,
-  `category` int(11) NOT NULL,
+  `ingredients` varchar(255) DEFAULT NULL,
+  `picture` varchar(255) DEFAULT NULL,
+  `category` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

@@ -1,3 +1,7 @@
+config.js
+tmp/*
+public/image
+
 
 # Created by https://www.gitignore.io/api/macos,windows
 
@@ -5,8 +9,6 @@
 *.DS_Store
 .AppleDouble
 .LSOverride
-
-config.js
 
 # Icon must end with two \r
 Icon

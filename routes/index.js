@@ -18,7 +18,11 @@ router.get('/contact' ,function(req, res, next){
 });
 
 router.get('/produits' ,function(req, res, next){
-  res.render('produits')
+  connection.query('SELECT * FROM products;', function (error, results, fields) {
+    if (error) throw error;
+    console.log(results);
+    res.render('produits', {products:results});
+  });
 });
 
 router.get('/login' ,function(req, res, next){

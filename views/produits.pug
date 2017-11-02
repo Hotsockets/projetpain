@@ -8,9 +8,15 @@ mixin 1produit(product)
 mixin paquet2(n)
   .paquet2
     .prod
-      +1produit(products[n])
+      if products[n]
+        +1produit(products[n])
+      else
+         .emptyproduct  
     .prod
-      +1produit(products[n+1])
+      if products[n+1]
+        +1produit(products[n+1])
+      else
+         .emptyproduct  
 
 mixin row(n)
   .row
@@ -25,4 +31,10 @@ block content
         +1produit(products[0])
       .row1
         +row(1)
-  +row(5)
+    //- +row(5)
+    //- +row(9)
+    - var i = 5
+    while i < products.length
+      +row(i)
+      - i=i+4
+//- .slice(5)

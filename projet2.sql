@@ -135,7 +135,7 @@ CREATE TABLE `products` (
   `picture` varchar(255) DEFAULT NULL,
   `category` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -144,7 +144,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (23,'22crfer','vvrvrcecr','rvrecre','pompimini1.png','ccvsdecccecrecrere');
+INSERT INTO `products` VALUES (25,'3r4324','<p>vdsvd<strong>svd</strong>s</p>','3423','tourmini1.png','fdsfdsf'),(26,'sca','<p>sccs</p>','scs','catmini1.png','csac'),(27,'33','<p>33</p>','33','invmini1c.png','33'),(28,'444','<p>&nbsp;44</p>','44','pontmini1b.png','44'),(29,'55','<p>55</p>','55','peremini1b.png','55'),(30,'66','<p>66</p>','66','pompimini1c.png','66'),(31,'77','<p>77</p>','77','invmini1.png','77'),(32,'88','<p>88</p>','88','peremini1c.png','88'),(33,'99','<p>99</p>','99','pontmini1.png','99'),(34,'10','<p>10</p>','10','montmini1b.png','10'),(35,'11','<p>11</p>','11','peremini1b.png','11'),(38,'12','<p>12</p>','12','invmini1c.png','12'),(39,'13','<p>13</p>','13','louvremini1.png','13'),(40,'14','<p>14</p>','14','damemini1b.png','14');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,4 +182,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-10-31 14:50:40
+-- Dump completed on 2017-11-02 22:07:35

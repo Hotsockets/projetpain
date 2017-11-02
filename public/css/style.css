@@ -403,6 +403,11 @@ text-align: center;
   box-shadow: 5px 5px 5px grey;
 }
 
+.emptyproduct{
+  width: 400px;
+  height: 300px;
+}
+
 .lightBox:hover{
   background-color: white;
   border-color: white;

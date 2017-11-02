@@ -620,7 +620,9 @@ footer {
   vertical-align: top;
   justify-content: center;
   /*padding: 100px 0 100px;*/
+  /*
   background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/36/breads-1761272_960_720.jpg');
+  */
   background-position: center;
   background-size: cover;
   background-color: rgba(0, 0, 0, 0.5);

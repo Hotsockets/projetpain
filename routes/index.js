@@ -28,20 +28,28 @@ router.get('/login' ,function(req, res, next){
 
 // admin login
 router.post('/login', function(req, res, next) {
-	console.log(req.body);
-	let name = req.body.login;
-	let pass = req.body.password;
-	console.log(name, pass);
-	connection.query('SELECT * FROM users WHERE login = ? AND password = ? ;',[name, pass],function (error, results, fields) {
-		if (error) throw error;
-		if (results.length === 0) {
-			res.redirect('/');
-		} else {
-			req.session.connected = true;
-			console.log(req.session);
-			res.redirect('/admin');
-		}
-	});
+  console.log(req.body);
+  let name = req.body.login;
+  let pass = req.body.password;
+  console.log(name, pass);
+  connection.query('SELECT * FROM users WHERE login = ? AND password = ? ;',[name, pass],function (error, results, fields) {
+    if (error) throw error;
+    if (results.length === 0) {
+      res.redirect('/');
+    } else {
+      req.session.connected = true;
+      req.session.cookie.maxAge = 3600000; // 1 heure
+      console.log(req.session);
+      res.redirect('/admin');
+    }
+  });
+});
+
+// admin logout
+router.get('/logout', function(req, res, next) {
+  req.session.destroy(function(err) {
+    res.redirect('/');
+  });
 });
 
 

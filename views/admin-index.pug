@@ -6,6 +6,10 @@ block content
 	a(href="/logout") Se déconnecter
 	br
 	br
+	if message
+		br
+		h2= message+id
+		br
 	table(border="1" width="90%")
 		tr
 			th #

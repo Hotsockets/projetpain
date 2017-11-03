@@ -1,15 +1,19 @@
-form(method="POST" enctype="multipart/form-data")
+form(method="POST" enctype="multipart/form-data" action="/admin/create-product")
 	h1 Nouveau produit
-	input(type="text" name="product_name" placeholder="Nom du produit")
+	if message
+		br
+		h2= message
+		br
+	input(type="text" name="product_name" placeholder="Nom du produit" value=body.product_name)
 	br
 	br
-	input(type="text" name="ingredients" placeholder="Ingredients")
+	input(type="text" name="ingredients" placeholder="Ingredients" value=body.ingredients)
 	br
 	br
-	input(type="text" name="category" placeholder="Catégorie")
+	input(type="text" name="category" placeholder="Catégorie" value=body.category)
 	br
 	br
-	textarea(name="product_description" placeholder="Description du produit" rows='6' cols='50')
+	textarea(name="product_description" placeholder="Description du produit" rows='6' cols='50')= body.product_description
 	br
 	br
 	input(type="file" name="product_picture")

@@ -23,24 +23,37 @@ router.get('/', function(req, res, next) {
 
 // GET /admin/create-product
 router.get('/create-product', function(req, res, next) {
-	res.render('admin-create');
+	res.render('admin-create',{message:'',body:{product_name:'',ingredients:'',category:'',product_description:''},product_picture:''});
 });
 
 // POST /admin/create-product
 router.post('/create-product', upload.single('product_picture'), function(req, res, next) {
 	console.log(req.body);
-	if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg')) {
-		fs.rename(req.file.path,'public/images/'+req.file.originalname);
-		// Ajouter un produit dans la table 'products'
-		connection.query('insert into products values(null, ?, ?, ?, ?, ?);',
-		[req.body.product_name, req.body.product_description, req.body.ingredients, req.file.originalname, req.body.category],
-		function (error, results, fields) {
-			if (error) throw error;
-			res.redirect('/admin');
-			//console.log(results);
-		});
+	console.log(req.file);
+	if (req.body.product_name.length > 55 || req.body.ingredients.length > 255 || req.body.category.length > 255 ||	req.body.product_description.length > 255){
+		res.render('admin-create',{message:'Attention, les textes sont trop longs :', body:req.body});
+	};
+	if (req.file) {
+		if (req.file.originalname.length < 241){
+			if(req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg')) {
+				console.log('insertion');
+				fs.rename(req.file.path,'public/images/'+req.file.originalname);
+				// Ajouter un produit dans la table 'products'
+				connection.query('insert into products values(null, ?, ?, ?, ?, ?);',
+				[req.body.product_name, req.body.product_description, req.body.ingredients, req.file.originalname, req.body.category],
+				function (error, results, fields) {
+					if (error) throw error;
+					res.redirect('/admin');
+					//console.log(results);
+				});
+			} else {
+				res.render('admin-create',{message:'Attention, image de type png ou jpeg requis, 3Mo de poids maximum', body:req.body});
+			}
+		} else {
+			res.render('admin-create',{message:'Attention, nom de fichier trop long', body:req.body});
+		}
 	} else {
-		res.send('Vous avez fait une erreur dans le téléchargement')
+		res.render('admin-create',{message:'Attention, une image est requise :', body:req.body});
 	}
 });
 
@@ -71,13 +84,16 @@ router.get('/modify', function(req, res, next) {
 
 router.post('/modify', upload.single('product_picture'), function(req, res){
 	console.log(req.file);
-	console.log(req.body.product_picture);
+	console.log(req.body);
+	if (req.body.product_name.length > 55 || req.body.ingredients.length > 255 ||	req.body.category.length > 255 ||	req.body.product_description.length > 255){
+		res.render('admin-create',{message:'Attention, les textes sont trop longs :', body:req.body});
+	}
 	if (req.file){
-		console.log(req.body.product_picture);
-		if (req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg')) {
+		if (req.file.originalname.length < 241 && req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg')) {
 			fs.rename(req.file.path,'public/images/'+req.file.originalname);
 		} else {
-			res.send('Vous avez fait une erreur dans le téléchargement')
+			// La longueur du nom de fichier est aussi testée, mais le message n'en parle pas. Je trouve ca trop technique et le cas est rare
+			res.render('admin-create',{message:'Attention, image de type png ou jpeg requis, 3Mo de poids maximum', body:req.body});
 		}
 		connection.query('UPDATE products SET picture = ? WHERE id = ?',
 		[req.file.originalname, req.query.idProduit],

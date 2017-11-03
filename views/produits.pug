@@ -2,8 +2,9 @@ extends layout
 //- res.render('produits', {products:results});
 
 mixin 1produit(product)
-  img.lightBox(alt= product.name, src='images/'+ product.picture)
-  p= product.name
+  a(href="/produit-"+product.id)
+    img.lightBox(alt= product.name, src='images/'+ product.picture)
+    p= product.name
   
 mixin paquet2(n)
   .paquet2

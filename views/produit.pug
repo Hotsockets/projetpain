@@ -1,0 +1,18 @@
+extends layout
+//-     res.render('produit', {product:results});
+block content
+  .container-fluid
+    a(href="/") Accueil
+    .
+      - 
+    a(href="/produits") Produits
+    .
+      - 
+    a(href="/produit-"+product.id)= product.name
+    .
+      >
+    br
+    img.lightBox(alt= product.name, src='images/'+ product.picture)
+    p= product.name
+    p= product.description
+    p= product.ingredients

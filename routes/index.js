@@ -25,6 +25,14 @@ router.get('/produits' ,function(req, res, next){
   });
 });
 
+router.get('/produit-:idproduit(\\d+)' ,function(req, res, next){
+  connection.query('SELECT * FROM products WHERE id='+req.params.idproduit+';', function (error, results, fields) {
+    if (error) throw error;
+    console.log(results);
+    res.render('produit', {product:results[0]});
+  });
+});
+
 router.get('/login' ,function(req, res, next){
   res.render('login')
 });

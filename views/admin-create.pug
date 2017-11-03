@@ -19,3 +19,46 @@ form(method="POST" enctype="multipart/form-data")
 script(src='https://cloud.tinymce.com/stable/tinymce.min.js')
 script.
 	tinymce.init({ selector:'textarea' });
+script.
+
+//- /*
+//- var sVar1 = encodeURIComponent("contenu avec des espaces");
+//- 
+//- var sVar2 = encodeURIComponent("je vois que vous êtes un bon élève... oopa !");
+//- 
+//- 
+//- xhr.open("GET", "handlingData.php?variable1=" + sVar1 + "&variable2= " + sVar2, true);
+//- 
+//- xhr.send(null);
+//- */
+
+//- <form>
+//- 	<input type="text" name="city" id="city" placeholder="City" size="50" maxlength="30">
+//- </form>
+//- <input type="button" id="clickMe" value="Submit">
+//- <script>
+//- 
+//- document.onreadystatechange = function () {
+//- 	document.getElementById("clickMe").onclick = getthecityname;
+//- 
+//- 	function getthecityname (){
+//- 		var city = document.getElementById("city").value;
+//- 		console.log("City:",city);
+//- 
+//- 		var xhr = new XMLHttpRequest();
+//- 
+//- 		xhr.open("GET","http://api.openweathermap.org/data/2.5/forecast?q="+city+"&units=metric&APPID=096247cb370ee7b808f6578b219dec6c", true);
+//- 		xhr.send(null);
+//- 
+//- 		xhr.onreadystatechange = function() {
+//- 			if (xhr.readyState == 4 && xhr.status == 200) {
+//- 				// Typical action to be performed when the document is ready:
+//- 				console.log("Temps qu'il fait: %s", city);
+//- 				var response = JSON.parse(xhr.responseText);
+//- 				alert(response.list[0].main.temp+" dC")
+//- 			} else {
+//- 				console.log("Status de la réponse: %d (%s)", xhr.status, xhr.statusText);
+//- 			}
+//- 		}
+//- 	}
+//- }

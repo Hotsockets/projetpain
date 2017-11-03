@@ -129,11 +129,11 @@ DROP TABLE IF EXISTS `products`;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
+  `name` varchar(50) NOT NULL,
   `description` varchar(255) DEFAULT NULL,
   `ingredients` varchar(255) DEFAULT NULL,
   `picture` varchar(255) DEFAULT NULL,
-  `category` varchar(255) DEFAULT NULL,
+  `category` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;

@@ -27,13 +27,14 @@ header {
 }
 
 #hamburger-content nav {
+  text-align: center;
   display: inline-block;
   line-height: 48px;
   vertical-align: top;
 }
 
-#hamburger-content li {
-  margin-left: 32px;
+#hamburger-content  li {
+  margin-left: 165px;
 }
 #hamburger-content li a, .button {
   text-decoration: none;
@@ -43,6 +44,10 @@ header {
 #hamburger-content ul > li:hover > a {
   border-bottom: solid 5px rgba(75, 67, 67, 0.7);
   transition: 0.6s;
+}
+#hamburger-content .dropdown-menu li{
+  margin-left: -5px;
+  padding: 30px;
 }
 #hamburger-content .dropdown-menu li:hover a {
   border-bottom : solid 0px rgba(0, 0, 0, 0);
@@ -107,13 +112,14 @@ header {
   color: black;
 }
 #hamburger-sidebar-header {
-  background: url("http://www.lepaindepapou.fr/img/photos/zoom/accueil-001.jpg") center;
+  background: url("https://fournilsdeconstance.com/wp-content/uploads/2015/07/gamme_viennoiserie-big.jpg") center;
   background-size: cover;
-  height: 128px;
+  height: 200px;
 }
 #hamburger-sidebar-body {
   padding: 16px 8px;
 }
+
 #hamburger-sidebar-body li:before {
   content: ' ';
   display: inline-block;
@@ -123,18 +129,7 @@ header {
   width: 24px;
   height: 24px;
 }
-#hamburger-sidebar-body li:first-child:before {
-  background-image: url("#");
-}
-#hamburger-sidebar-body li:nth-child(2):before {
-  background-image: url("#");
-}
-#hamburger-sidebar-body li:nth-child(3):before {
-  background-image: url("#");
-}
-#hamburger-sidebar-body li:last-child:before {
-  background-image: url("#");
-}
+
 #hamburger-sidebar-body .button {
   margin-top: 16px;
   text-align: center;
@@ -239,6 +234,8 @@ header {
   border-top: solid 1px rgba(75, 67, 67, 0.5);
   border-bottom: solid 1px rgba(75, 67, 67, 0.5);
   height: 60px;
+  background-color: rgba(250, 250, 250, 0.8);
+
 }
 
 .nav > ul > li {
@@ -273,18 +270,25 @@ header {
 
 
  /*PARALLAX */
+ h1 {
+   color: white;
+   text-shadow: 1px 2px 3px;
+   text-align: center;
+   vertical-align: middle;
+   line-height: 700px;
+ }
 .parallax {
-  background-image: url("http://www.unautrepainunautregout.fr/img/photos/zoom/accueil2.jpg");
+  background-image: url("http://portugalmundial.com/wp-content/uploads/2014/07/stock-footage-bakers-hands-rubbing-flour-off-on-black-background-in-slow-motion.jpg");
   height: 700px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-
 }
+
 .parallax2 {
-  background-image: url("https://www.bakewithzing.com/sites/default/files/french%20baguette%20recipe%20classes.jpg");
+  background-image: url("http://www.agrodolce.it/wp-content/uploads/2013/12/Farine-cover.jpg");
   height: 450px;
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -341,12 +345,14 @@ box-shadow: 5px 5px 5px grey;
 font-size: 35px;
 text-align: center;
 }
+
 .imgproduit {
   padding-top: 10px;
   padding-bottom: 10px;
-  width: 350px;
-  height: 300px;
+  width: 315px;
+  height: 280px;
 }
+
 .produitcentréresponsive {
 text-align: center;
 }
@@ -608,10 +614,8 @@ footer {
   vertical-align: top;
   justify-content: center;
   /*padding: 100px 0 100px;*/
-  background-image: url('https://cdn.pixabay.com/photo/2016/10/22/17/36/breads-1761272_960_720.jpg');
-  background-position: center;
-  background-size: cover;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: url('https://st3.depositphotos.com/4665275/13231/i/1600/depositphotos_132314864-stock-photo-two-black-bread-with-flour.jpg');
+  background-size: 100% 145%;
 }
 
 footer ul {
@@ -635,8 +639,12 @@ footer ul li a {
 }
 
 footer ul li a:hover{
-  color:white;
-}
+  color: white;
+  background-color: rgba(0,0,0,0.3);}
+
+footer p:hover{
+  color: white;
+  background-color: rgba(0,0,0,0.4);}
 
 footer p{
   text-align: center;
@@ -661,6 +669,7 @@ footer p{
   padding-left: 20px;
   padding-right: 20px;
 }
+
 
 .social > ul > li {
   padding: 5px;

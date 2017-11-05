@@ -13,8 +13,14 @@ header {
   box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
 }
 
-/*
-*/
+/*CAPTCHA*/
+
+.g-recaptcha{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+/*CAPTCHA*/
 #logo, nav, li {
   display: inline-block;
 }
@@ -555,7 +561,22 @@ h2 {
 .titre {
   text-align: center;
   width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
+
+hr {
+ width: 150px;
+ float: center;
+ border: solid 1px;
+}
+.horaires {
+  margin-left:-30px;
+}
+.horaires li {
+  display: table;
+  margin: auto;
+  }
 
 .carte {
   /*
@@ -569,7 +590,7 @@ h2 {
   display: inherit;
   flex-wrap: wrap;
   justify-content:center;
-  align-items: flex-start;
+  align-items: center;
   padding: 20px;
   width: 80%;
   background-color: white;
@@ -614,8 +635,7 @@ footer {
   vertical-align: top;
   justify-content: center;
   /*padding: 100px 0 100px;*/
-  background: url('https://st3.depositphotos.com/4665275/13231/i/1600/depositphotos_132314864-stock-photo-two-black-bread-with-flour.jpg');
-  background-size: 100% 145%;
+  background: url('https://www.grainchain.com/sites/default/files/flour-baking-background-with-egg%2C-rolling-pin-and-wheat-ear-000069728007_Medium_1.jpg');
 }
 
 footer ul {
@@ -636,20 +656,22 @@ footer ul li a {
   font-size: 21px;
   cursor: pointer;
   color: white;
+  background-color: rgba(0,0,0,0.4);
 }
 
 footer ul li a:hover{
   color: white;
-  background-color: rgba(0,0,0,0.3);}
+  }
 
 footer p:hover{
   color: white;
-  background-color: rgba(0,0,0,0.4);}
+  }
 
 footer p{
   text-align: center;
   font-size: 21px;
   color: white;
+  background-color: rgba(0,0,0,0.4);
 }
 
 .social {

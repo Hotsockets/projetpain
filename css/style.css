@@ -656,22 +656,24 @@ footer ul li a {
   font-size: 21px;
   cursor: pointer;
   color: white;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.3);
 }
 
 footer ul li a:hover{
   color: white;
+  background-color: rgba(0,0,0,0.5);
   }
 
 footer p:hover{
   color: white;
+  background-color: rgba(0,0,0,0.5);
   }
 
 footer p{
   text-align: center;
   font-size: 21px;
   color: white;
-  background-color: rgba(0,0,0,0.4);
+  background-color: rgba(0,0,0,0.3);
 }
 
 .social {

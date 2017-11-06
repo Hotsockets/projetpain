@@ -241,7 +241,6 @@ header {
   border-bottom: solid 1px rgba(75, 67, 67, 0.5);
   height: 60px;
   background-color: rgba(250, 250, 250, 0.8);
-
 }
 
 .nav > ul > li {
@@ -395,12 +394,15 @@ text-align: center;
   height: 650px;
 }
 
-.lightBox{
+.lightBox {
   width: 400px;
   height: 300px;
   border-color: white;
   background-color: white;
-  box-shadow: 5px 5px 5px grey;
+}
+
+.btn  {
+  border-radius: 5px;
 }
 
 .lightBox:hover{
@@ -424,6 +426,8 @@ text-align: center;
   align-items: center;
   justify-content: center;
   flex-direction: row;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .row1{
@@ -460,7 +464,7 @@ text-align: center;
   border-color: white;
   background-color: white;
   border-radius: 15px;
-  box-shadow: 1px 1px 1px 1px grey;
+
 }
 
 .prod-photo:hover{

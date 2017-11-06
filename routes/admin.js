@@ -15,10 +15,8 @@ router.get('/', function(req, res, next) {
 	connection.query('SELECT * FROM products;', function (error, results, fields) {
 		if (error) throw error;
 		// console.log(results);
-		res.render('admin-index', {products:results});
+		res.render('admin-index',{products:results});
 	});
-	// Afficher la liste des produits de la table 'products'
-	//;
 });
 
 // GET /admin/create-product

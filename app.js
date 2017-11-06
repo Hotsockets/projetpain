@@ -42,13 +42,14 @@ app.use('/', index);
 app.use('/users', users);
 
 app.use('/admin', function (req, res, next) {
+  console.log(req.session);
   if (req.session.connected){
     return next();
   } else {
     return res.redirect('/');
   }
-}
-);
+});
+
 app.use('/admin', admin);
 
 // catch 404 and forward to error handler

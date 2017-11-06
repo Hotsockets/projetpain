@@ -18,10 +18,15 @@ router.get('/contact' ,function(req, res, next){
 });
 
 router.get('/produits' ,function(req, res, next){
-  connection.query('SELECT * FROM products;', function (error, results, fields) {
+  connection.query('SELECT * FROM products', function (error, results, fields) {
+    console.log(results.filter(obj => obj.category == '1'));
+    console.log(results.filter(obj => obj.category == '2'));
+    console.log(results.filter(obj => obj.category == '3'));
     if (error) throw error;
-    console.log(results);
-    res.render('produits', {products:results});
+    res.render('produits',
+      {'products_cat1':results.filter(obj => obj.category == '1'),
+		  'products_cat2':results.filter(obj => obj.category == '2'),
+		  'products_cat3':results.filter(obj => obj.category == '3')});
   });
 });
 
@@ -38,7 +43,7 @@ router.get('/login' ,function(req, res, next){
 });
 
 
-// admin login
+// /login
 router.post('/login', function(req, res, next) {
   console.log(req.body);
   let name = req.body.login;
@@ -57,7 +62,7 @@ router.post('/login', function(req, res, next) {
   });
 });
 
-// admin logout
+// /logout
 router.get('/logout', function(req, res, next) {
   req.session.destroy(function(err) {
     res.redirect('/');

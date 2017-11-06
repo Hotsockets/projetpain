@@ -12,7 +12,12 @@ block content
     .
       >
     br
-    img.plus(alt= product.name, src='images/'+ product.picture)
-    p= product.name
-    p= product.description
-    p= product.ingredients
+    .row.row1produit
+      .col-xs-12.col-md-7
+        img.photo1produit(alt= product.name, src='images/'+ product.picture)
+      .col-xs-12.col-md-5
+        p.Nom!= product.name
+        h3 Description
+        p.Description!= product.description
+        h3 Ingrédients
+        p.Ingredients!= product.ingredients

@@ -1,0 +1,22 @@
+mixin 1produit(product)
+  a(href="/produit-"+product.id)
+    img.lightBox(alt= product.name, src='images/'+ product.picture)
+    p= product.name
+      
+mixin paquet2(n)
+  .paquet2
+    .prod
+      if products[n]
+        +1produit(products[n])
+      else
+         .emptyproduct  
+    .prod
+      if products[n+1]
+        +1produit(products[n+1])
+      else
+         .emptyproduct  
+
+mixin row(n)
+  .row
+    +paquet2(n)
+    +paquet2(n+2)

@@ -1,28 +1,10 @@
 extends layout
-//- res.render('produits', {products:results});
-
-mixin 1produit(product)
-  a(href="/produit-"+product.id)
-    img.lightBox(alt= product.name, src='images/'+ product.picture)
-    p= product.name
-  
-mixin paquet2(n)
-  .paquet2
-    .prod
-      if products[n]
-        +1produit(products[n])
-      else
-         .emptyproduct  
-    .prod
-      if products[n+1]
-        +1produit(products[n+1])
-      else
-         .emptyproduct  
-
-mixin row(n)
-  .row
-    +paquet2(n)
-    +paquet2(n+2)
+include mixins
+block content
+  .parallax
+    .container-fluid
+      img#1.lightBox(alt= product.name, src='images/'+ product.picture)
+        p= product.name
 
 block content
   .parallax
@@ -32,10 +14,8 @@ block content
         +1produit(products[0])
       .row1
         +row(1)
-    //- +row(5)
-    //- +row(9)
+  
     - var i = 5
     while i < products.length
       +row(i)
       - i=i+4
-//- .slice(5)

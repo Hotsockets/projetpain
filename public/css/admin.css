@@ -35,7 +35,13 @@ text-align: center;
 .save {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border: 0.5px solid grey;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
 }
 
 p {
@@ -50,9 +56,14 @@ size : 150px;
 margin-left: 50px;
 }
 
+#product {
+  margin-left: 50px;
+  width: 90%;
+}
+
 .deco /*bouton*/{
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 293px;
   margin-left: 50px;
   background-color: white;
   height: 40px;
@@ -60,6 +71,17 @@ margin-left: 50px;
   border: 0.5px solid grey;
   box-shadow: 3px 3px 3px grey;
   border-radius: 5px;
+}
+
+.place{
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border: 0.5px solid grey;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 .retour/*retour aux produits*/{

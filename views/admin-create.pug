@@ -29,13 +29,14 @@ block content
 				option(value='3') Pâtisseries
 		br
 		p Ajoutez une description : 
-			textarea(id="product_description" name="product_description" placeholder="Description du produit" rows='6' cols='50')= body.product_description
+		.row#product
+			textarea(name="product_description" placeholder="Description du produit" rows='6' cols='50')= body.product_description
 		br
 		br
 		input(type="file" name="product_picture")
 		br
 		br
-		button(class="deco" type="submit") Enregistrer
+		button(class="place" type="submit") Enregistrer
 	script(src='https://cloud.tinymce.com/stable/tinymce.min.js')
 	script.
 		tinymce.init({ selector:'textarea' });

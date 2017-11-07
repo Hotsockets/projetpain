@@ -7,21 +7,42 @@ h2 {
 text-align: center;
 }
 
-#products /* tableau des produits */ {
+#products, #sections /* tableau des produits */ {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20%;
 }
 
-#products td, #products th {
+#products td, #products th, #sections td, #sections th {
     border: 1px solid #ddd;
     padding: 8px;
 }
-#products tr:nth-child(even){background-color: #f2f2f2;}
 
-#products tr:hover {background-color: #ddd;}
+#products tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#sections tr:nth-child(even){
+  background-color: #f2f2f2;
+}
+
+#products tr:hover {
+  background-color: #ddd;
+}
+
+#sections tr:hover {
+  background-color: #ddd;
+}
 
 #products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3b5998;
+    color: white;
+}
+
+#sections th {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;

@@ -3,9 +3,9 @@ append head
 	link(rel='stylesheet', href='/css/admin.css')
 block content
 
-	a(href="/admin") Retour aux produits
+	a(class="retour" href="/admin") ← Retour aux produits
 	br
-	a(href="/logout") Se déconnecter
+	a(class="deconnecte" href="/logout") Se déconnecter
 
 	form(method="POST" enctype="multipart/form-data" action="/admin/create-product")
 		h1 Nouveau produit
@@ -35,7 +35,7 @@ block content
 		input(type="file" name="product_picture")
 		br
 		br
-		button(type="submit") Enregistrer
+		button(class="deco" type="submit") Enregistrer
 	script(src='https://cloud.tinymce.com/stable/tinymce.min.js')
 	script.
 		tinymce.init({ selector:'textarea' });

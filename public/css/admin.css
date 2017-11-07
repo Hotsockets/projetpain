@@ -17,3 +17,31 @@ height: 30px;
 size : 150px;
 margin-left: 50px;
 }
+
+.deco /*bouton*/{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border: 0.5px solid grey;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
+}
+
+.retour/*retour aux produits*/{
+  color: black;
+}
+.retour:hover{
+  color:black;
+}
+
+.deconnecte{
+  color: black;
+  margin-right: 300px;
+}
+
+.deconnecte:hover{
+  color:black;
+}

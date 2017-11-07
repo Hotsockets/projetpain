@@ -2,8 +2,9 @@ extends layout
 append head
   link(rel='stylesheet', href='/css/admin.css')
 block content
-  h2 Identifiez-vous pour faire vos modifications
+  h1 Identifiez-vous pour faire vos modifications
   br
+  p Lorsque vous serez connecté, vous pourrez modifier, supprimer ou ajouter des produits. 
   form(action='/login', method='post')
     input(name='login' placeholder='Login') 
     br  
@@ -11,4 +12,4 @@ block content
     input(type="password" name='password' placeholder='Password')
     br
     br
-    button(type='submit') S'identifier
+    button(class="deco" type='submit') S'identifier

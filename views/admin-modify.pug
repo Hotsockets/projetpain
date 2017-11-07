@@ -2,9 +2,9 @@ extends layout
 append head
 	link(rel='stylesheet', href='/css/admin.css')
 block content
-	a(href="/admin") Retour aux produits
+	a(class="retour" href="/admin") ← Retour aux produits
 	br
-	a(href="/logout") Se déconnecter
+	a(class="deconnecte" href="/logout") Se déconnecter
 	
 	form(method="POST" enctype="multipart/form-data" action='/admin/modify?idProduit='+ product.id)
 		h1 Modifier un produit
@@ -33,5 +33,5 @@ block content
 		input(type="text" name="category" placeholder="Catégorie" value= product.category)
 		br
 		br
-		button(type="submit" onclick="return confirm('Voulez-vous modifier cet élément ?');") Enregistrer
+		button(class="deco" type="submit" onclick="return confirm('Voulez-vous modifier cet élément ?');") Enregistrer
 	

@@ -1,20 +1,24 @@
 mixin 1produit(product)
+  .prod
+    a(href="/produit-"+product.id)
+      img.lightBox(alt= product.name, src='images/'+ product.picture)
+      p= product.name
+
+mixin 1produittop(product)
   a(href="/produit-"+product.id)
-    img.lightBox(alt= product.name, src='images/'+ product.picture)
+    img.prod-photo(alt= product.name, src='images/'+ product.picture)
     p= product.name
   
 mixin paquet2(n, zeproducts)
   .paquet2
-    .prod
-      if zeproducts[n]
-        +1produit(zeproducts[n])
-      else
-         .emptyproduct  
-    .prod
-      if zeproducts[n+1]
-        +1produit(zeproducts[n+1])
-      else
-         .emptyproduct  
+    if zeproducts[n]
+      +1produit(zeproducts[n])
+    else
+       .emptyproduct  
+    if zeproducts[n+1]
+      +1produit(zeproducts[n+1])
+    else
+       .emptyproduct  
 
 mixin row(n, zeproducts)
   .row
@@ -22,10 +26,15 @@ mixin row(n, zeproducts)
     +paquet2(n+2, zeproducts)
 
 mixin product_cat(zeproducts)
+  if (zeproducts[0].category==1)
+    h2.titre_cat Les pains
+  if (zeproducts[0].category==2)
+    h2.titre_cat Les viennoiseries
+  if (zeproducts[0].category==3)
+    h2.titre_cat Les pâtisseries
   .row
-    h2 Section
     .prod-top
-      +1produit(zeproducts[0])
+      +1produittop(zeproducts[0])
     .row1
       +row(1, zeproducts)
   - var i = 5

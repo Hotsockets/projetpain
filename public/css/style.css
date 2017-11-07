@@ -384,10 +384,13 @@ text-align: center;
   margin: 20px;
 }
 
-img.photo1produit{
+.photo1produit {
+  /*background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/images/picture.png);*/
   height:700px;
-  width:700px;
-  padding-left: 50px;
+  /*min-width:700px;*/
 }
 
 .Nom{
@@ -405,12 +408,17 @@ h3{
 }
 
 .Description{
-  text-align: left;
+  text-align: center;
   font-size: 20px;
 }
 .Ingredients{
-  text-align: left;
+  text-align: center;
   font-size: 20px;
+}
+
+.texte1produit{
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*PRODUITS*/
@@ -501,6 +509,10 @@ h3{
   margin: 5px;
 }
 
+.ariane {
+  text-align: center;
+}
+
 .prod{
   text-align: center;
   /*margin-top: 15px;*/
@@ -513,13 +525,14 @@ h3{
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 620px;
+  width: 615px;
   height: 475px;
   text-align: center;
   padding-left: 5px;
+  margin-right: 5px;
 }
 .prod-top p{
-  width: 620px;
+  width: 615px;
   margin-top: 10px;
 }
 
@@ -551,12 +564,13 @@ h3{
    .paquet2{
       flex-wrap: wrap;
   }
-  .prod-photo{
+  /*.prod-photo{
     width: 400px;
     height: 300px;
     justify-content: center;
-  }
+  }*/
 }
+
 @media only screen and (min-width:1200px){
   .photo1produit{
     width: 820px;

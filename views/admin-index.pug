@@ -1,9 +1,10 @@
 extends layout
-
+append head
+	link(rel='stylesheet', href='/css/admin.css')
 block content
-	a(href="/admin/create-product") Ajouter un produit
-	br
-	a(href="/logout") Se déconnecter
+	.liens
+			a(class="retour" href="/admin/create-product") Ajouter un produit 
+			a(class="deconnecte" href="/logout") Se déconnecter
 	br
 	br
 	if message

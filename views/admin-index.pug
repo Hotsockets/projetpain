@@ -29,5 +29,5 @@ block content
 					img(src="/images/" + product.picture height="50")
 				td= product.category
 				td 
-					a(href="/admin/delete-product?id=" + product.id onlick="return confirm('Voulez-vous vraiment supprimer ce produit?');" class="btn btn-warning") Supprimer
+					a(href="/admin/delete-product?id=" + product.id onclick="return confirm('Voulez-vous vraiment supprimer ce produit?');" class="btn btn-warning") Supprimer
 					a(href="/admin/modify?id=" + product.id class="btn btn-info") Modifier 

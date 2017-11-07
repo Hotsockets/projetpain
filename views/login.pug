@@ -1,7 +1,14 @@
 extends layout
-
+append head
+  link(rel='stylesheet', href='/css/admin.css')
 block content
+  h2 Identifiez-vous pour faire vos modifications
+  br
   form(action='/login', method='post')
     input(name='login' placeholder='Login') 
-    input(name='password' placeholder='Password')
+    br  
+    br
+    input(type="password" name='password' placeholder='Password')
+    br
+    br
     button(type='submit') S'identifier

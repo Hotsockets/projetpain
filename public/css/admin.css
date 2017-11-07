@@ -1,0 +1,19 @@
+h1 {
+text-align: center;
+text-shadow: 1px 1px 2px;
+}
+
+h2 {
+text-align: center;
+}
+
+p {
+font-size : 20px;
+margin-left: 60px;
+}
+
+input {
+height: 30px;
+size : 150px;
+margin-left: 50px;
+}

@@ -1,12 +1,13 @@
 doctype html
 html
   head
-    meta(charset='utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
-    link(rel='stylesheet', href='/css/style.css')
-    link(rel='icon', type='image/png', href='http://www.nottyscafe.co.uk/wp-content/uploads/2017/04/baguette-icon-12.png')
-    title Accueil
+    block head
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1.0')
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+      link(rel='stylesheet', href='/css/style.css')
+      link(rel='icon', type='image/png', href='http://www.nottyscafe.co.uk/wp-content/uploads/2017/04/baguette-icon-12.png')
+      title Au Bon Pain
   body
     include header
 
@@ -17,6 +18,3 @@ html
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     script(type='text/javascript', src='js/accueil.js')
     script(src="https://www.google.com/recaptcha/api.js")
-    script(src='https://cloud.tinymce.com/stable/tinymce.min.js')
-    script.
-      tinymce.init({ selector:'#product_description' });

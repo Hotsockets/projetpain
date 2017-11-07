@@ -8,7 +8,7 @@ mixin 1produit(product)
 mixin 1produittop(product)
   a(href="/produit-"+product.id)
     img.prod-photo(alt= product.name, src='images/'+ product.picture)
-    p= product.name
+    p.prod-top-legend= product.name
   
 mixin paquet2(n, zeproducts)
   .paquet2

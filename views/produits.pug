@@ -1,42 +1,7 @@
 extends layout
-
-mixin 1produit(product)
-  a(href="/produit-"+product.id)
-    img.lightBox(alt= product.name, src='images/'+ product.picture)
-    p= product.name
-      
-mixin paquet2(n, zeproducts)
-  .paquet2
-    .prod
-      if zeproducts[n]
-        +1produit(zeproducts[n])
-      else
-         .emptyproduct  
-    .prod
-      if zeproducts[n+1]
-        +1produit(zeproducts[n+1])
-      else
-         .emptyproduct  
-
-mixin row(n, zeproducts)
-  .row
-    +paquet2(n, zeproducts)
-    +paquet2(n+2, zeproducts)
-
-mixin product_cat(zeproducts)
-  .row
-    h2 Section
-    .prod-top
-      +1produit(zeproducts[0])
-    .row1
-      +row(1, zeproducts)
-  - var i = 5
-  while i < zeproducts.length
-    +row(i, zeproducts)
-    - i=i+4
+include mixins
 
 block content
-  .parallax
   .container-fluid
     +product_cat(products_cat1)
     +product_cat(products_cat2)

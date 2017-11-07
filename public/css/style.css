@@ -444,7 +444,6 @@ h3{
   border-color: white;
   background-color: white;
   box-shadow: 5px 5px 5px grey;
-  border-radius: 5px;
   margin: 5px;
   margin-bottom: 10px;
 }
@@ -512,19 +511,24 @@ h3{
 
 .prod-top{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   width: 620px;
   height: 475px;
   text-align: center;
+  padding-left: 5px;
+}
+.prod-top p{
+  width: 620px;
+  margin-top: 10px;
 }
 
 .prod-photo{
-  min-width: 620px;
-  min-height: 440px;
+  min-width: 610px;
+  min-height: 445px;
+  clip-path: polygon(0px 0px, 610px 0px, 610px 445px, 0px 445px);
   border-color: white;
   background-color: white;
-  border-radius: 15px;
   box-shadow: 1px 1px 1px 1px grey;
 }
 

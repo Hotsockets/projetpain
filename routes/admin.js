@@ -74,7 +74,7 @@ router.get('/delete-product', function(req, res, next) {
 router.get('/modify', function(req, res, next) {
 	connection.query('SELECT * FROM products WHERE id=?',[req.query.id], function (error, results, fields) {
 		if (error) throw error;
-		//console.log(results);
+		console.log(results);
 		res.render('admin-modify', {product:results[0]});
 		//console.log(results);
 	});

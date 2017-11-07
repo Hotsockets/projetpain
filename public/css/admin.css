@@ -7,6 +7,28 @@ h2 {
 text-align: center;
 }
 
+#products /* tableau des produits */ {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20%;
+}
+
+#products td, #products th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+#products tr:nth-child(even){background-color: #f2f2f2;}
+
+#products tr:hover {background-color: #ddd;}
+
+#products th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #3b5998;
+    color: white;
+}
+
 .wysiwyg {
   font-size: 30px;
   margin-left: 80px;
@@ -29,13 +51,20 @@ text-align: center;
 .chose {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
 }
 
 .save {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  margin-bottom: 20px;
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border: 0.5px solid grey;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
 }
 
 p {
@@ -50,9 +79,27 @@ size : 150px;
 margin-left: 50px;
 }
 
-.deco /*bouton*/{
+
+#product {
+  margin-left: 50px;
+  width: 90%;
+}
+
+.identificate /*btn s'identifier*/ {
   text-align: center;
   margin-bottom: 20px;
+  margin-left: 50px;
+  margin-bottom: 240px;
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border: 0.5px solid grey;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
+}
+.deco /*bouton*/{
+  text-align: center;
+  margin-bottom: 293px;
   margin-left: 50px;
   background-color: white;
   height: 40px;
@@ -60,6 +107,17 @@ margin-left: 50px;
   border: 0.5px solid grey;
   box-shadow: 3px 3px 3px grey;
   border-radius: 5px;
+}
+
+.place{
+  background-color: white;
+  height: 40px;
+  width: 100px;
+  border: 0.5px solid grey;
+  box-shadow: 3px 3px 3px grey;
+  border-radius: 5px;
+  margin-left: 50px;
+  margin-bottom: 20px;
 }
 
 .retour/*retour aux produits*/{
@@ -71,7 +129,7 @@ margin-left: 50px;
 
 .deconnecte{
   color: black;
-  margin-right: 300px;
+  float: right;
 }
 
 .deconnecte:hover{

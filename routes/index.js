@@ -10,11 +10,19 @@ connection.connect();
 
 
 router.get('/' ,function(req, res, next){
-  res.render('index')
+  connection.query('SELECT * FROM sections;', function (error, results, fields) {
+    if (error) throw error;
+    console.log(results);
+    res.render('index',{sections:results});
+  });
 });
 
 router.get('/contact' ,function(req, res, next){
-  res.render('formulaire')
+  connection.query('SELECT * FROM sections;', function (error, results, fields) {
+    if (error) throw error;
+    console.log(results);
+    res.render('formulaire',{sections:results});
+  });
 });
 
 router.get('/produits' ,function(req, res, next){

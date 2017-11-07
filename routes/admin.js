@@ -14,8 +14,16 @@ connection.connect();
 router.get('/', function(req, res, next) {
 	connection.query('SELECT * FROM products;', function (error, results, fields) {
 		if (error) throw error;
-		// console.log(results);
+		console.log(results);
 		res.render('admin-index',{products:results});
+	});
+});
+
+router.get('/section', function(req, res, next) {
+	connection.query('SELECT * FROM sections;', function (error, results, fields) {
+		if (error) throw error;
+		console.log(results);
+		res.render('admin-index-section',{sections:results});
 	});
 });
 
@@ -101,7 +109,6 @@ router.post('/modify', upload.single('product_picture'), function(req, res){
 			}
 		});
 	}
-
 	connection.query('UPDATE products SET name = ?, description = ?, ingredients = ?, category = ? WHERE id = ?',
 	[req.body.product_name, req.body.product_description, req.body.ingredients, req.body.category, req.query.idProduit],
 	function(error){
@@ -110,6 +117,48 @@ router.post('/modify', upload.single('product_picture'), function(req, res){
 		}
 	});
 	res.redirect('/admin');
+});
+
+// GET /admin/modify-product
+router.get('/modify-section', function(req, res, next) {
+	connection.query('SELECT * FROM sections WHERE id=?',[req.query.id], function (error, results, fields) {
+		if (error) throw error;
+		console.log(results);
+		res.render('admin-modify-sections', {section:results[0]});
+		//console.log(results);
+	});
+});
+
+router.post('/modify-section', upload.single('section_picture'), function(req, res){
+	console.log(req.file);
+	console.log(req.body);
+	if (req.body.section_name.length > 150 || req.body.paragraph.length > 500){
+		res.render('admin-modify-sections',{message:'Attention, les textes sont trop longs :', section:req.body});
+	}
+	if (req.file){
+		if (req.file.originalname.length < 241 && req.file.size < (3*1024*1024) && (req.file.mimetype == 'image/png' || req.file.mimetype == 'image/jpeg')) {
+			fs.rename(req.file.path,'public/images/'+req.file.originalname);
+		} else {
+			// La longueur du nom de fichier est aussi testée, mais le message n'en parle pas. Je trouve ca trop technique et le cas est rare
+			res.render('admin-modify-sections',{message:'Attention, image de type png ou jpeg requis, 3Mo de poids maximum', section:req.body});
+		}
+		connection.query('UPDATE sections SET picture = ? WHERE id = ?',
+		[req.file.originalname, req.query.idSection],
+		function(error){
+			if (error) {
+				console.log(error);
+			}
+		});
+	}
+
+	connection.query('UPDATE sections SET title = ?, text = ? WHERE id = ?',
+	[req.body.section_name, req.body.paragraph, req.query.idSection],
+	function(error){
+		if (error) {
+			console.log(error);
+		}
+	});
+	res.redirect('/admin/section');
 });
 
 

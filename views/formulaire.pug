@@ -11,7 +11,7 @@ block content
       input#subject(type='text', name='subject', placeholder='Sujet', size='60', maxlength='40')
       textarea#message(name='message', placeholder='Message', rows='10', cols='60')
       // Notre boite de vérification
-      .g-recaptcha(data-sitekey='6LeuNQITAAAAAPGRU7dkrCPIrrR64WPvzMc7pn6Z')
+      .g-recaptcha(data-sitekey='6LcipTcUAAAAABgl54LzJvTI7AcL4EqAviJf81Xo')
       button#envoi.button-formulaire Envoi
       #statut
   section.carte
@@ -27,15 +27,8 @@ block content
           br
           | 75005 Paris
         hr  
-        h2 Horaires :
-        ul#horaires.horaires
-          li Lundi : 12h - 20h
-          li Mardi : 7h - 20h
-          li Mercredi : 7h - 20h
-          li Jeudi : 7h - 20h
-          li Vendredi : 7h - 20h
-          li Samedi : 7h - 20h
-          li Dimanche : 7h - 13h
+        h2=sections[2].title
+        ul#horaires.horaires!=sections[2].text
   section.infospratiques2
     h2 Accès PMR
     p

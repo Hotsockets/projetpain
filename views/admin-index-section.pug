@@ -1,0 +1,29 @@
+extends layout
+append head
+	link(rel='stylesheet', href='/css/admin.css')
+block content
+	.liens
+			a(class="retour" href="/admin") Retour vers liste des produits
+			a(class="deconnecte" href="/logout") Se déconnecter
+	br
+	br
+	if message
+		br
+		h2= message+id
+		br
+	table(id="sections" border="1" width="90%")
+		tr
+			th #
+			th Titre 
+			th Paragraphe
+			th Image
+			th Action
+		each section in sections
+			tr
+				td= section.id
+				td= section.title
+				td= section.text  
+				td 
+					img(src="/images/" + section.picture height="50")
+				td 
+					a(href="/admin/modify-section?id=" + section.id class="btn btn-info") Modifier

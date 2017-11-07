@@ -282,14 +282,14 @@ header {
 /* NAVBAR */
 
 
- /*PARALLAX */
- .titre {
-   color: white;
-   text-shadow: 1px 2px 3px;
-   text-align: center;
-   vertical-align: middle;
-   line-height: 700px;
- }
+/*PARALLAX */
+.titre {
+  color: white;
+  text-shadow: 1px 2px 3px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 700px;
+}
 .parallax {
   background-image: url("http://portugalmundial.com/wp-content/uploads/2014/07/stock-footage-bakers-hands-rubbing-flour-off-on-black-background-in-slow-motion.jpg");
   height: 700px;
@@ -317,22 +317,22 @@ header {
 
 
 section.baltha {
-margin-top: 130px;
-margin-bottom: 130px;
-background-color: #fff;
+  margin-top: 130px;
+  margin-bottom: 130px;
+  background-color: #fff;
 }
 
 section.baltha1 {
-margin-top: 215px;
-margin-bottom: 215px;
-background-color: #fff;
+  margin-top: 215px;
+  margin-bottom: 215px;
+  background-color: #fff;
 }
 
 .loremimage img {
-width : 100%;
-height: auto;
-border-radius:20px;
-box-shadow: 5px 5px 5px grey;
+  width : 100%;
+  height: auto;
+  border-radius:20px;
+  box-shadow: 5px 5px 5px grey;
 }
 
 .loremipsum h3 {
@@ -355,8 +355,8 @@ box-shadow: 5px 5px 5px grey;
 }
 
 .lesproduits {
-font-size: 35px;
-text-align: center;
+  font-size: 35px;
+  text-align: center;
 }
 
 .imgproduit {
@@ -367,7 +367,7 @@ text-align: center;
 }
 
 .produitcentréresponsive {
-text-align: center;
+  text-align: center;
 }
 
 .description2{
@@ -385,12 +385,10 @@ text-align: center;
 }
 
 .photo1produit {
-  /*background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-image: url(/images/picture.png);*/
-  height:700px;
-  /*min-width:700px;*/
+  min-width:880px;
+  min-height:660px;
+  clip-path: polygon(0px 0px, 880px 0px, 880px 660px, 0px 660px);
+  box-shadow: 3px 3px 3px 3px grey;
 }
 
 .Nom{
@@ -448,7 +446,8 @@ h3{
 
 .lightBox{
   width: 300px;
-  height: 200px;
+  height: auto;
+  clip-path: polygon(0px 0px, 300px 0px, 300px 200px, 0px 200px);
   border-color: white;
   background-color: white;
   box-shadow: 5px 5px 5px grey;
@@ -515,10 +514,19 @@ h3{
 
 .prod{
   text-align: center;
+  width: 310px;
+  height: 240px;
+  position: relative;
   /*margin-top: 15px;*/
   /*margin-bottom: 15px;*/
   /*margin-left: 8px;
   margin-right: 8px;*/
+}
+
+.prod-legend{
+  position: absolute;
+  top: 210px;
+  width: 310px;
 }
 
 .prod-top{
@@ -561,13 +569,13 @@ h3{
 }
 
 @media only screen and (max-width: 900px){
-   .paquet2{
-      flex-wrap: wrap;
+  .paquet2{
+    flex-wrap: wrap;
   }
   /*.prod-photo{
-    width: 400px;
-    height: 300px;
-    justify-content: center;
+  width: 400px;
+  height: 300px;
+  justify-content: center;
   }*/
 }
 
@@ -661,9 +669,9 @@ h2 {
 }
 
 hr {
- width: 150px;
- float: center;
- border: solid 1px;
+  width: 150px;
+  float: center;
+  border: solid 1px;
 }
 .horaires {
   margin-left:-30px;
@@ -671,7 +679,7 @@ hr {
 .horaires li {
   display: table;
   margin: auto;
-  }
+}
 
 .carte {
   /*
@@ -737,13 +745,15 @@ footer ul {
   flex-direction: row;
   text-align: center;
   align-items: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 footer ul li{
-    list-style: none;
-  padding: 0 12px 0 12px;
+  list-style: none;
+  padding: 15px;
+  /*background-color: rgba(0,0,0,0.1);
+  border-radius: 10px;*/
+  filter:drop-shadow(0px 0px 5px black);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
 }
 /*footer réseaux sociaux*/
 footer ul li a {
@@ -751,25 +761,32 @@ footer ul li a {
   font-size: 21px;
   cursor: pointer;
   color: white;
-  background-color: rgba(0,0,0,0.3);
-  }
+}
 
-  footer ul li a:hover{
+footer img{
+  background-color: white;
+  filter:drop-shadow(0px 0px 5px black);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+footer ul li a:hover{
   color: white;
-  background-color: rgba(0,0,0,0.5);
-  }
+}
 
-  footer p:hover{
+footer p:hover{
   color: white;
-  background-color: rgba(0,0,0,0.5);
-  }
+}
 
-  footer p{
+footer p{
   text-align: center;
   font-size: 21px;
   color: white;
-  background-color: rgba(0,0,0,0.3);
-  }
+  /*padding: 15px;*/
+  /*background-color: rgba(0,0,0,0.3);*/
+  /*border-radius: 10px;*/
+  filter:drop-shadow(0px 0px 5px black);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
 
 .social {
   display: inherit;
@@ -796,7 +813,7 @@ footer ul li a {
 
 /*n° de téléphone cliquable*/
 .mobilesOnly {
-    color: white;
+  color: white;
 }
 .mobilesOnly a{
   color: white;
@@ -808,6 +825,7 @@ footer ul li a {
   border-radius:150px;
   width:37px;
   height:37px;
+  padding: 0px;
 }
 
 @media only screen and (max-width: 700px){

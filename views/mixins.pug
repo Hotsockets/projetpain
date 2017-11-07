@@ -2,7 +2,8 @@ mixin 1produit(product)
   .prod
     a(href="/produit-"+product.id)
       img.lightBox(alt= product.name, src='images/'+ product.picture)
-      p= product.name
+      .prod-legend
+        p= product.name
 
 mixin 1produittop(product)
   a(href="/produit-"+product.id)

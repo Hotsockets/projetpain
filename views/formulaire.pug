@@ -27,15 +27,8 @@ block content
           br
           | 75005 Paris
         hr  
-        h2 Horaires :
-        ul#horaires.horaires
-          li Lundi : 12h - 20h
-          li Mardi : 7h - 20h
-          li Mercredi : 7h - 20h
-          li Jeudi : 7h - 20h
-          li Vendredi : 7h - 20h
-          li Samedi : 7h - 20h
-          li Dimanche : 7h - 13h
+        h2=sections[2].title
+        ul#horaires.horaires!=sections[2].text
   section.infospratiques2
     h2 Accès PMR
     p

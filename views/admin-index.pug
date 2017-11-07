@@ -3,22 +3,23 @@ append head
 	link(rel='stylesheet', href='/css/admin.css')
 block content
 	.liens
-			a(class="retour" href="/admin/create-product") Ajouter un produit 
-			a(class="deconnecte" href="/logout") Se déconnecter
+		a(class="retour" href="/admin/create-product") Ajouter un produit 
+		a(class="retour" href="/admin/section") Modifier les sections
+		a(class="deconnecte" href="/logout") Se déconnecter
 	br
 	br
-	if message
-		br
-		h2= message+id
-		br
+	//- if message
+	//- 	br
+	//- 	h2= message+id
+	//- 	br					
 	table(id="products" border="1" width="90%")
 		tr
 			th #
-			th name 
+			th nom du produit 
 			th description
 			th ingrédients
 			th image
-			th category
+			th catégories
 			th action
 		each product in products
 			tr

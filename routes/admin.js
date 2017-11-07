@@ -132,7 +132,7 @@ router.get('/modify-section', function(req, res, next) {
 router.post('/modify-section', upload.single('section_picture'), function(req, res){
 	console.log(req.file);
 	console.log(req.body);
-	if (req.body.section_name.length > 150 || req.body.paragraph.length > 500){
+	if (req.body.section_name.length > 150 || req.body.paragraph.length > 2500){
 		res.render('admin-modify-sections',{message:'Attention, les textes sont trop longs :', section:req.body});
 	}
 	if (req.file){

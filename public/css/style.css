@@ -445,9 +445,11 @@ h3{
 }
 
 .lightBox{
+  /*min-width: 300px;
+  min-height: 200px;*/
   width: 300px;
-  height: auto;
-  clip-path: polygon(0px 0px, 300px 0px, 300px 200px, 0px 200px);
+  height: 200px;
+  /*clip-path: polygon(0px 0px, 300px 0px, 300px 200px, 0px 200px);*/
   border-color: white;
   background-color: white;
   box-shadow: 5px 5px 5px grey;
@@ -475,7 +477,7 @@ h3{
   text-shadow: 1px 1px 2px;
   margin-top: 100px;
   margin-bottom: 50px;
-  font-size: 42px;
+  font-size: 38px;
 }
 
 .row{
@@ -576,11 +578,23 @@ h3{
   .paquet2{
     flex-wrap: wrap;
   }
-  /*.prod-photo{
-  width: 400px;
-  height: 300px;
-  justify-content: center;
-  }*/
+}
+@media only screen and (max-width: 589px){
+  .prod-photo{
+    min-width: 300px;
+    min-height: 200px;
+    width: 300px;
+    height: 200px;
+  }
+  .prod-top{
+    width: 310px;
+    height: 240px;
+  }
+  .prod-top-legend{
+    width: 310px;
+    position: absolute;
+    top: 210px;
+  }
 }
 
 @media only screen and (min-width:1200px){

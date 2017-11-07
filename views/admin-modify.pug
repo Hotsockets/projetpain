@@ -3,7 +3,6 @@ append head
 	link(rel='stylesheet', href='/css/admin.css')
 block content
 	a(class="retour" href="/admin") ← Retour aux produits
-	br
 	a(class="deconnecte" href="/logout") Se déconnecter
 	
 	form(method="POST" enctype="multipart/form-data" action='/admin/modify?idProduit='+ product.id)
@@ -34,7 +33,7 @@ block content
 		br
 		p.picturetext Photo
 		img(src= "/images/" +product.picture).picture
-		input(type="file" name="product_picture").chose
+		input(class="chose" type="file" name="product_picture")
 		br
 		br
 		button(class="save" type="submit" onclick="return confirm('Voulez-vous modifier cet élément ?');") Enregistrer

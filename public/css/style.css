@@ -1,0 +1,884 @@
+body {
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* NAVBAR */
+header {
+  text-transform: uppercase;
+  background-color: #FFF;
+  padding: 16px 0 16px 32px;
+  font-size: 15px;
+  box-shadow: 0 1px 16px rgba(0, 0, 0, .4);
+}
+
+/*CAPTCHA*/
+
+.g-recaptcha{
+  margin-top: 15px;/public
+  margin-bottom: 15px;
+  text-align: center;
+}
+/*CAPTCHA*/
+#logo, nav, li {
+  display: inline-block;
+}
+
+#logo {
+  width: 48px;
+  height: 48px;
+}
+
+#hamburger-content nav {
+  text-align: center;
+  display: inline-block;
+  line-height: 48px;
+  vertical-align: top;
+}
+
+#hamburger-content  li {
+  margin-left: 325px;
+}
+#hamburger-content li a, .button {
+  text-decoration: none;
+  color: #333;
+}
+
+#hamburger-content ul > li:hover > a {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+  transition: 0.6s;
+}
+#hamburger-content .dropdown-menu li{
+  margin-left: -5px;
+  padding: 30px;
+}
+#hamburger-content .dropdown-menu li:hover a {
+  border-bottom : solid 0px rgba(0, 0, 0, 0);
+}
+#hamburger-sidebar ul > li:hover > a {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+  transition: 0.6s;
+}
+#hamburger-sidebar .dropdown-menu li:hover a {
+  border-bottom : solid 0px rgba(0, 0, 0, 0);
+}
+#hamburger, #hamburger-content {
+  display: inline;
+}
+
+
+#hamburger-button {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 30px;
+  vertical-align: top;
+  padding: 0;
+  line-height: 47px;
+  float: right;
+  margin-right: 32px;
+}
+
+#hamburger-overlay {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+#hamburger-sidebar {
+  display: none;
+  position: fixed;
+  width: 84%;
+  z-index: 20;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #FFF;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: transform .2s ease-out;
+}
+#hamburger-sidebar li {
+  transform: translateX(20%);
+  padding: 20px 20px;
+  display: block;
+}
+
+#hamburger-sidebar li a {
+  text-decoration: none;
+  color: black;
+}
+#hamburger-sidebar-header {
+  background: url("https://fournilsdeconstance.com/wp-content/uploads/2015/07/gamme_viennoiserie-big.jpg") center;
+  background-size: cover;
+  height: 200px;
+}
+#hamburger-sidebar-body {
+  padding: 16px 8px;
+}
+
+#hamburger-sidebar-body li:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 4px;
+  margin-right: 16px;
+  width: 24px;
+  height: 24px;
+}
+
+#hamburger-sidebar-body .button {
+  margin-top: 16px;
+  text-align: center;
+  float: none;
+  display: block;
+  height: auto;
+  line-height: inherit;
+  padding: 10px;
+}
+#hamburger-sidebar-body .dropdown {
+  padding-bottom: 40px;
+  margin-left: 25px;
+}
+#hamburger-sidebar-body .dropdown-menu {
+  position: relative;
+  float: right;
+  padding-right: 70px;
+
+}
+
+@media screen and (max-width: 1024px) {
+  #hamburger-content {
+    display: none;
+  }
+  .nav .pasla {
+    display: none;
+  }
+
+  #hamburger-button, #hamburger-sidebar,
+  .hamburger-activated #hamburger-overlay {
+    display: block;
+  }
+
+  .hamburger-activated #hamburger-sidebar {
+    transform: translateX(0);
+  }
+}
+
+
+/*Dropdown*/
+.dropdown a {
+  background-color: white;
+  border: none;
+}
+.pasla .dropdown a{
+  background-color: rgba(250, 250, 250, 0.8);
+}
+
+.pasla ul li .dropdown a .btn-default .dropdown-toggle{
+  background-color: rgba(250, 250, 250, 0.8);
+}
+
+.dropdown a:hover  {
+  background-color: white;
+}
+
+.btn-default:active:hover{
+  background-color: white;
+}
+
+.btn-default:active, .open > .dropdown-toggle.btn-default{
+  background-color: white;
+}
+
+.btn-default:active, .open > .dropdown-toggle.btn-default:hover{
+  background-color: white;
+}
+
+.btn-default:active{
+  background-color: white;
+}
+
+.dropdown-toggle:hover {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+  padding-bottom: 1px;
+  transition: 0.6s;
+}
+
+.nav .dropdown-toggle:hover {
+  border-bottom: none;
+}
+
+
+.displayflex {
+  display: flex;
+}
+
+.nav .pasla {
+  display: none;
+}
+
+.nav {
+  position: fixed;
+  display: none;
+  top: 20px;
+  justify-content: center;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 1000;
+}
+
+.nav > ul  {
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 80%;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: solid 1px rgba(75, 67, 67, 0.5);
+  border-bottom: solid 1px rgba(75, 67, 67, 0.5);
+  height: 60px;
+  background-color: rgba(250, 250, 250, 0.8);
+
+}
+
+.nav > ul > li {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+.nav > ul > li > a {
+  color:  rgba(75, 67, 67, 1);
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  text-decoration: none !important;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.nav > ul > li:hover {
+  border-bottom: solid 5px rgba(75, 67, 67, 0.7);
+  transition: 0.6s;
+}
+
+.nav > ul > li:hover a  {
+  padding-bottom: 0;
+  transition: 0.6s;
+}
+
+/* NAVBAR */
+
+
+/*PARALLAX */
+.titre {
+  color: white;
+  text-shadow: 1px 2px 3px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 700px;
+  font-size: 40px;
+}
+.parallax {
+  background-image: url("http://portugalmundial.com/wp-content/uploads/2014/07/stock-footage-bakers-hands-rubbing-flour-off-on-black-background-in-slow-motion.jpg");
+  height: 700px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  background-image: url("http://www.agrodolce.it/wp-content/uploads/2013/12/Farine-cover.jpg");
+  height: 450px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.parallax3 {
+  background-image: url("http://portugalmundial.com/wp-content/uploads/2014/07/stock-footage-bakers-hands-rubbing-flour-off-on-black-background-in-slow-motion.jpg");
+  height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.parallax4 {
+  background-image: url("http://www.agrodolce.it/wp-content/uploads/2013/12/Farine-cover.jpg");
+  height: 300px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+
+/*PARALLAX */
+
+
+/* PARAGRAPhE */
+
+
+section.baltha {
+  margin-top: 130px;
+  margin-bottom: 130px;
+  background-color: #fff;
+}
+
+section.baltha1 {
+  margin-top: 215px;
+  margin-bottom: 215px;
+  background-color: #fff;
+}
+
+.loremimage img {
+  width : 100%;
+  height: auto;
+  border-radius:20px;
+  box-shadow: 5px 5px 5px grey;
+}
+
+.loremipsum h3 {
+  text-align: center;
+}
+
+.loremipsum p{
+  font-size: 15px;
+  vertical-align: center;
+  text-align: justify;
+}
+
+.citation {
+  padding-top: 100px;
+  padding-bottom: 60px;
+  font-size: 30px;
+  font-weight: bold;
+  text-shadow: 3px 3px 2px grey;
+  text-align: center;
+}
+
+.lesproduits {
+  font-size: 35px;
+  text-align: center;
+}
+
+.imgproduit {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 315px;
+  height: 280px;
+}
+
+.produitcentréresponsive {
+  text-align: center;
+}
+
+.description2{
+  margin-bottom: 30px;
+}
+.description3{
+  margin-bottom: 30px;
+}
+
+/* PARAGRAPhE */
+
+/*PRODUITS*/
+.row1produit {
+  margin: 20px;
+}
+
+.photo1produit {
+  min-width:880px;
+  min-height:660px;
+  clip-path: polygon(0px 0px, 880px 0px, 880px 660px, 0px 660px);
+  box-shadow: 3px 3px 3px 3px grey;
+}
+
+.Nom{
+  text-align: center;
+  margin-top: -300px;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 15px;
+}
+
+h3{
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.Description{
+  text-align: center;
+  font-size: 20px;
+}
+.Ingredients{
+  text-align: center;
+  font-size: 20px;
+}
+
+.texte1produit{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+/*PRODUITS*/
+
+/* LIGHTBOX */
+
+.cecile {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.modal-dialog {
+  width: 80%;
+  height: auto;
+  max-height: 1000px;
+}
+
+.modal-content{
+  width: 1400px;
+  height: 730px;
+
+}
+
+.plus{
+  width:1000px;
+  height: 650px;
+}
+
+.lightBox{
+  /*min-width: 300px;
+  min-height: 200px;*/
+  width: 300px;
+  height: 200px;
+  /*clip-path: polygon(0px 0px, 300px 0px, 300px 200px, 0px 200px);*/
+  border-color: white;
+  background-color: white;
+  box-shadow: 5px 5px 5px grey;
+  margin: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.lightBox:hover{
+  background-color: white;
+  border-color: white;
+}
+
+.lightBox:active{
+  background-color: white;
+  border-color: white;
+}
+
+.btn-primary:active:hover{
+  background-color: white;
+  border-color: white;
+}
+
+.titre_cat{
+  text-align: center;
+  text-shadow: 1px 1px 2px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-size: 38px;
+  /*border-bottom: 2px;*/
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.row1{
+  width: 620px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.paquet2{
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.emptyproduct{
+  width: 300px;
+  height: 200px;
+  border-color: white;
+  background-color: white;
+  margin: 5px;
+}
+
+.ariane {
+  text-align: center;
+}
+
+.prod{
+  text-align: center;
+  width: 310px;
+  height: 240px;
+  position: relative;
+  /*margin-top: 15px;*/
+  /*margin-bottom: 15px;*/
+  /*margin-left: 8px;
+  margin-right: 8px;*/
+}
+
+.prod-legend{
+  position: absolute;
+  top: 210px;
+  width: 310px;
+}
+
+.prod-top{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 615px;
+  height: 475px;
+  text-align: center;
+  padding-left: 5px;
+  margin-right: 5px;
+  position: relative;
+}
+.prod-top-legend{
+  width: 615px;
+  position: absolute;
+  top: 450px;
+}
+
+.prod-photo{
+  width: 610px;
+  height: 445px;
+  /*clip-path: polygon(0px 0px, 610px 0px, 610px 445px, 0px 445px);*/
+  border-color: white;
+  background-color: white;
+  box-shadow: 5px 5px 5px grey;
+  border-radius: 5px;
+}
+
+.prod-photo:hover{
+  background-color: white;
+  border-color: white;
+}
+
+.prod-photo:active{
+  background-color: white;
+  border-color: white;
+}
+
+.btn-primary:active:hover{
+  background-color: white;
+  border-color: white;
+}
+
+@media only screen and (max-width: 900px){
+  .paquet2{
+    flex-wrap: wrap;
+  }
+}
+@media only screen and (max-width: 589px){
+  .prod-photo{
+    min-width: 300px;
+    min-height: 200px;
+    width: 300px;
+    height: 200px;
+  }
+  .prod-top{
+    width: 310px;
+    height: 240px;
+  }
+  .prod-top-legend{
+    width: 310px;
+    position: absolute;
+    top: 210px;
+  }
+}
+
+@media only screen and (min-width:1200px){
+  .photo1produit{
+    width: 820px;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 991px){
+  .photo1produit{
+    width: 570px;
+    height: auto;
+  }
+}
+
+/* LIGHTBOX */
+
+section h2{
+  text-align: center;
+}
+
+body{
+  font-size: 15px;
+}
+
+/* FORMULAIRE */
+
+/*formulaire*/
+.position{
+  width: 500px;
+  margin-top: 15px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.position input, textarea{
+  margin-top: 20px;
+}
+
+.button-formulaire{
+  display:block;
+  width:100px;
+  line-height:40px;
+  text-align:center;
+  vertical-align:middle;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+  margin-left: 180px;
+  margin-bottom: 10px;
+  opacity: 1;
+  box-shadow: 10px 5px 5px #4f311c;
+}
+
+h2 {
+  margin-top: 20px;
+  font-family: 'Merriweather', serif;
+}
+
+.infospratiques p {
+  text-align: center;
+}
+.infospratiques2{
+  text-align: center;
+  margin: 50px;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* FORMULAIRE */
+
+/* MAP & HORAIRES */
+
+/*horaires*/
+.titre {
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+hr {
+  width: 150px;
+  float: center;
+  border: solid 1px;
+}
+.horaires {
+  margin-left:-30px;
+}
+.horaires li {
+  display: table;
+  margin: auto;
+}
+
+.carte {
+  /*
+  background-color: #222;
+  */
+  display: flex;
+  justify-content:center;
+}
+
+.wrapper {
+  display: inherit;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  padding: 20px;
+  width: 80%;
+  background-color: white;
+}
+
+.map {
+  width: 600px;
+  flex-basis: auto;
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.address {
+  width: 360px;
+  height: 410px;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  border: 3px;
+  border-style: solid;
+  border-color: #eee;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 700px){
+  .map {
+    width: 100px;
+  }
+  .position{
+    width: 250px;
+  }
+}
+
+/* MAP & HORAIRES */
+
+/*footer*/
+footer {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: top;
+  justify-content: center;
+  /*padding: 100px 0 100px;*/
+  background: url('https://www.grainchain.com/sites/default/files/flour-baking-background-with-egg%2C-rolling-pin-and-wheat-ear-000069728007_Medium_1.jpg');
+}
+
+footer ul {
+  flex-direction: row;
+  text-align: center;
+  align-items: center;
+}
+
+footer ul li{
+  list-style: none;
+  padding: 15px;
+  /*background-color: rgba(0,0,0,0.1);
+  border-radius: 10px;*/
+  filter:drop-shadow(0px 0px 5px black);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+/*footer réseaux sociaux*/
+footer ul li a {
+  text-align: center;
+  font-size: 21px;
+  cursor: pointer;
+  color: white;
+}
+
+footer img{
+  background-color: white;
+  filter:drop-shadow(0px 0px 5px black);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+footer ul li a:hover{
+  color: white;
+}
+
+footer p:hover{
+  color: white;
+}
+
+footer p{
+  text-align: center;
+  font-size: 21px;
+  color: white;
+  /*padding: 15px;*/
+  /*background-color: rgba(0,0,0,0.3);*/
+  /*border-radius: 10px;*/
+  filter:drop-shadow(0px 0px 5px black);
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+.social {
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social3 {
+  display: inherit;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+.social > ul > li {
+  padding: 5px;
+}
+
+/*n° de téléphone cliquable*/
+.mobilesOnly {
+  color: white;
+}
+.mobilesOnly a{
+  color: white;
+}
+
+/*image*/
+.img-footer {
+  overflow:hidden;
+  border-radius:150px;
+  width:37px;
+  height:37px;
+  padding: 0px;
+}
+
+@media only screen and (max-width: 700px){
+  footer{
+    background-image: none;
+    background-color: white;
+  }
+  footer ul li a{
+    color: black;
+  }
+}

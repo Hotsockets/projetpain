@@ -1,0 +1,37 @@
+extends layout
+append head
+	link(rel='stylesheet', href='/css/admin.css')
+block content
+	br
+	br
+	.liens
+		a(class="retour" href="/admin/create-product") Ajouter un produit  -  
+		a(class="retour" href="/admin/section") Modifier les sections
+		a(class="deconnecte" href="/logout") Se déconnecter
+	br
+	br
+	//- if message
+	//- 	br
+	//- 	h2= message+id
+	//- 	br					
+	table(id="products" border="1" width="90%")
+		tr
+			th #
+			th nom du produit 
+			th description
+			th ingrédients
+			th image
+			th catégories
+			th action
+		each product in products
+			tr
+				td= product.id
+				td= product.name
+				td!= product.description  
+				td= product.ingredients
+				td 
+					img(src="/images/" + product.picture height="50")
+				td= product.category
+				td 
+					a(href="/admin/delete-product?id=" + product.id onclick="return confirm('Voulez-vous vraiment supprimer ce produit?');" class="btn btn-warning") Supprimer
+					a(href="/admin/modify?id=" + product.id class="btn btn-info") Modifier 

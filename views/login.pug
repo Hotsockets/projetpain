@@ -1,0 +1,15 @@
+extends layout
+append head
+  link(rel='stylesheet', href='/css/admin.css')
+block content
+  h1 Identifiez-vous pour faire vos modifications
+  br
+  p Lorsque vous serez connecté, vous pourrez modifier, supprimer ou ajouter des produits. 
+  form(action='/login', method='post')
+    input(name='login' placeholder='Login') 
+    br  
+    br
+    input(type="password" name='password' placeholder='Password')
+    br
+    br
+    button(class="identificate" type='submit') S'identifier

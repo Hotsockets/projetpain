@@ -1,0 +1,46 @@
+header
+  a(href="/")
+    img#logo(src="/img_projet/épideblé.png")
+  #hamburger
+    #hamburger-content
+      nav
+        ul
+          li
+            a(href='/') Accueil
+          li
+            .dropdown
+              a#menu1.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+                | Produits
+                span.caret
+              ul.dropdown-menu(role='menu', aria-labelledby='menu1')
+                li(role='presentation')
+                  a(role='menuitem', tabindex='-1', href='/produits#pain') Pain
+                li(role='presentation')
+                  a(role='menuitem', tabindex='-1', href='/produits#vienn') Viennoiseries
+                li(role='presentation')
+                  a(role='menuitem', tabindex='-1', href='/produits#pat') Patisseries
+          li
+            a(href='/contact') Contact
+    button#hamburger-button ☰
+    #hamburger-sidebar
+      #hamburger-sidebar-header
+      #hamburger-sidebar-body
+    #hamburger-overlay
+nav.nav.pasla
+  ul.nav-list
+    li
+      a(href='index.pug') Accueil
+    li
+      .dropdown
+        a#menu1.btn.btn-default.dropdown-toggle(data-toggle='dropdown')
+          | Produits
+          span.caret
+        ul.dropdown-menu(role='menu', aria-labelledby='menu1')
+          li(role='presentation')
+            a(role='menuitem', tabindex='-1', href='/produits#pain') Pain
+          li(role='presentation')
+            a(role='menuitem', tabindex='-1', href='/produits#vienn') Viennoiseries
+          li(role='presentation')
+            a(role='menuitem', tabindex='-1', href='/produits#pat') Patisseries
+    li
+      a(href='/contact') Contact

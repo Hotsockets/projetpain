@@ -1,0 +1,48 @@
+mixin 1produit(product)
+  .prod
+    a(href="/produit-"+product.id)
+      img.lightBox(alt= product.name, src='images/'+ product.picture)
+      .prod-legend
+        p= product.name
+
+mixin 1produittop(product)
+  a(href="/produit-"+product.id)
+    img.prod-photo(alt= product.name, src='images/'+ product.picture)
+    p.prod-top-legend= product.name
+  
+mixin paquet2(n, zeproducts)
+  .paquet2
+    if zeproducts[n]
+      +1produit(zeproducts[n])
+    else
+       .emptyproduct  
+    if zeproducts[n+1]
+      +1produit(zeproducts[n+1])
+    else
+       .emptyproduct  
+
+mixin row(n, zeproducts)
+  .row
+    +paquet2(n, zeproducts)
+    +paquet2(n+2, zeproducts)
+
+mixin product_cat(zeproducts)
+  if (zeproducts[0].category==1)
+    h2#pain.titre_cat Les pains
+
+    hr
+  if (zeproducts[0].category==2)
+    h2#vienn.titre_cat Les viennoiseries
+    hr
+  if (zeproducts[0].category==3)
+    h2#pat.titre_cat Les pâtisseries
+    hr
+  .row
+    .prod-top
+      +1produittop(zeproducts[0])
+    .row1
+      +row(1, zeproducts)
+  - var i = 5
+  while i < zeproducts.length
+    +row(i, zeproducts)
+    - i=i+4

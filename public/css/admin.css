@@ -66,7 +66,9 @@ text-align: center;
 .picture {
   display: block;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+  width: 350px;
+  height: auto;
 }
 
 .chose {

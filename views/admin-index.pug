@@ -27,7 +27,7 @@ block content
 			tr
 				td= product.id
 				td= product.name
-				td= product.description  
+				td!= product.description  
 				td= product.ingredients
 				td 
 					img(src="/images/" + product.picture height="50")

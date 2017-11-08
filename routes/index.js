@@ -83,8 +83,8 @@ var transport = mymailer.createTransport({
   host: "smtp.mailtrap.io",
   port: 2525,
   auth: {
-    user: "75be3d15fe2e3d",
-    pass: "e00f76308d0129"
+    user:	"bd7acc8d9be490",
+    pass:	"5f44214a89c2c9"
   }
 });
 
@@ -94,10 +94,10 @@ router.post('/sendamail', function(req, res, next) {
 
   //console.log(req);
   transport.sendMail({
-    from: req.query.name+' <'+req.query.email+'>', // Expediteur
+    from: req.body.name+' <'+req.body.email+'>', // Expediteur
     to: "supergrandma@yopmail.com", // Destinataires
-    subject: req.query.subject, // Sujet
-    text: req.query.message, // plaintext body
+    subject: req.body.subject, // Sujet
+    text: req.body.message, // plaintext body
   }, (error, response) => {
     if(error){
       console.log(error);
@@ -106,7 +106,7 @@ router.post('/sendamail', function(req, res, next) {
     }
     //res.end();
   });
-  //res.send('fin envoi');
+  res.render('message_ok');
 
 });
 

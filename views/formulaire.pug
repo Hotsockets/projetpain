@@ -3,16 +3,16 @@ block content
   
   section.position
     h2 Nous contacter
+    
     p#contactus Envoyer-nous un mail si vous avez des questions et/ou des suggestions.
-    form
-      // method="post" action="email"
+    form(method="post" action="/sendamail")
       input#name(type='text', name='name', placeholder='Nom et prénom', size='60', maxlength='40')
       input#email(type='email', name='subject', placeholder='Adresse e-mail', size='60', maxlength='40')
       input#subject(type='text', name='subject', placeholder='Sujet', size='60', maxlength='40')
       textarea#message(name='message', placeholder='Message', rows='10', cols='60')
       // Notre boite de vérification
       .g-recaptcha(data-sitekey='6LcipTcUAAAAABgl54LzJvTI7AcL4EqAviJf81Xo')
-      button#envoi.button-formulaire Envoi
+      button#envoi.button-formulaire(type="submit") Envoi
       #statut
   section.carte
     .wrapper

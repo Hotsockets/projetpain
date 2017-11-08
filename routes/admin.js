@@ -45,8 +45,8 @@ router.post('/create-product', upload.single('product_picture'), function(req, r
 				console.log('insertion');
 				fs.rename(req.file.path,'public/images/'+req.file.originalname);
 				// Ajouter un produit dans la table 'products'
-				connection.query('insert into products values(null, ?, ?, ?, ?, ?, ?);',
-				[req.body.product_name, req.body.product_description, req.body.ingredients, req.file.originalname, req.body.category, req.body.category],
+				connection.query('insert into products values(null, ?, ?, ?, ?, ?);',
+				[req.body.product_name, req.body.product_description, req.body.ingredients, req.file.originalname, req.body.category],
 				function (error, results, fields) {
 					if (error) throw error;
 					res.redirect('/admin');

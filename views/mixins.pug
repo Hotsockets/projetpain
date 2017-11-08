@@ -28,13 +28,14 @@ mixin row(n, zeproducts)
 
 mixin product_cat(zeproducts)
   if (zeproducts[0].category==1)
-    h2.titre_cat Les pains
+    h2#pain.titre_cat Les pains
+
     hr
   if (zeproducts[0].category==2)
-    h2.titre_cat Les viennoiseries
+    h2#vienn.titre_cat Les viennoiseries
     hr
   if (zeproducts[0].category==3)
-    h2.titre_cat Les pâtisseries
+    h2#pat.titre_cat Les pâtisseries
     hr
   .row
     .prod-top

@@ -576,8 +576,8 @@ h3{
 }
 
 .prod-photo{
-  min-width: 610px;
-  min-height: 445px;
+  width: 610px;
+  height: 445px;
   clip-path: polygon(0px 0px, 610px 0px, 610px 445px, 0px 445px);
   border-color: white;
   background-color: white;

@@ -45,8 +45,8 @@ router.post('/create-product', upload.single('product_picture'), function(req, r
 				console.log('insertion');
 				fs.rename(req.file.path,'public/images/'+req.file.originalname);
 				// Ajouter un produit dans la table 'products'
-				connection.query('insert into products values(null, ?, ?, ?, ?, ?);',
-				[req.body.product_name, req.body.product_description, req.body.ingredients, req.file.originalname, req.body.category],
+				connection.query('insert into products values(null, ?, ?, ?, ?, ?, ?);',
+				[req.body.product_name, req.body.product_description, req.body.ingredients, req.file.originalname, req.body.category, req.body.category],
 				function (error, results, fields) {
 					if (error) throw error;
 					res.redirect('/admin');
@@ -109,8 +109,8 @@ router.post('/modify', upload.single('product_picture'), function(req, res){
 			}
 		});
 	}
-	connection.query('UPDATE products SET name = ?, description = ?, ingredients = ?, category = ? WHERE id = ?',
-	[req.body.product_name, req.body.product_description, req.body.ingredients, req.body.category, req.query.idProduit],
+	connection.query('UPDATE products SET name = ?, description = ?, ingredients = ?, category = ?, rang = ? WHERE id = ?',
+	[req.body.product_name, req.body.product_description, req.body.ingredients, req.body.category, req.query.idProduit, req.body.category],
 	function(error){
 		if (error) {
 			console.log(error);
@@ -132,7 +132,7 @@ router.get('/modify-section', function(req, res, next) {
 router.post('/modify-section', upload.single('section_picture'), function(req, res){
 	console.log(req.file);
 	console.log(req.body);
-	if (req.body.section_name.length > 150 || req.body.paragraph.length > 500){
+	if (req.body.section_name.length > 150 || req.body.paragraph.length > 2500){
 		res.render('admin-modify-sections',{message:'Attention, les textes sont trop longs :', section:req.body});
 	}
 	if (req.file){

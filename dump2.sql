@@ -134,9 +134,8 @@ CREATE TABLE `products` (
   `ingredients` varchar(255) DEFAULT NULL,
   `picture` varchar(255) DEFAULT NULL,
   `category` varchar(255) DEFAULT NULL,
-  `rank` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=63 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -145,34 +144,8 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (23,'22crfer','<p style=\"text-align: left;\"><strong>vvrvrcecr</strong></p>','rvrecre','pompimini1.png','ccvsdecccecrecrere'),(24,'azeraz','<p>azeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazrazeazr</p>','zaeazr','pat4.jpg','1');
+INSERT INTO `products` VALUES (25,'3r4324brfdbr','<p>vdsvd<strong>svd</strong>s</p>','3423sssscvdvdfbvdsbds','arcmini1.png','1'),(26,'sca','<p>sccs</p>','scs','catmini1.png','1'),(27,'33','<p>33</p>','33','invmini1c.png','1'),(28,'444','<p>&nbsp;<strong>44</strong></p>','44','pontmini1b.png','2'),(29,'55','<p>55</p>','55','peremini1b.png','2'),(30,'66','<p>66</p>','66','pompimini1c.png','3'),(31,'77','<p>77</p>','77','invmini1.png','3'),(32,'88','<p>88</p>','88','peremini1c.png','1'),(33,'99','<p>99</p>','99','pontmini1.png','3'),(34,'10','<p>10</p>','10','montmini1b.png','2'),(35,'11','<p>11</p>','11','peremini1b.png','3'),(38,'12','<p>12</p>','12','invmini1c.png','2'),(39,'13','<p>13</p>','13','louvremini1.png','1'),(40,'14','<p>14</p>','14','damemini1b.png','2'),(43,'3r4324brfdbr','<p>vdsvd<strong>svd</strong>s</p>','3423s','tourmini1.png','2'),(44,'bdfrbdf','','','damemini1.png','2'),(45,'77','<p>77</p>','77','pontmini1.png','2'),(46,'vdvds','<p>vdsvdvd</p>','vdvd','pompimini1c.png','3'),(47,'bvrb','<p>vbfdbvfd</p>','bfdbfd','damemini1.png','1'),(51,'fbfbdbf','<p>bdfbffd</p>','bfdbfd','pompimini1.png','1'),(53,'bgfbgf','<p>4444444444</p>','222222','damemini1c.png','1'),(54,'11','<p>444444</p>','22','louvremini1c.png','2'),(55,'666','<p>666</p>','666','invmini1.png','3'),(56,'00','<p>00</p>','00','peremini1.png','2'),(57,'f','<p>ffffff</p>','f','catmini1c.png','2'),(58,'xxxx','<p>xxxx</p>','xxxx','invmini1.png','2'),(60,',kjlkl.,m.','<p>mnmbnb,.jkl</p>',';l;k.kj','invmini1b.png','1');
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
-UNLOCK TABLES;
-
---
--- Table structure for table `sections`
---
-
-DROP TABLE IF EXISTS `sections`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `sections` (
-  `id` int(11) NOT NULL,
-  `title` varchar(150) DEFAULT NULL,
-  `text` text,
-  `picture` varchar(250) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `sections`
---
-
-LOCK TABLES `sections` WRITE;
-/*!40000 ALTER TABLE `sections` DISABLE KEYS */;
-INSERT INTO `sections` VALUES (1,'Mon métier','Tout le mondes.',NULL),(2,'Histoire','Toutete.',NULL),(3,'Horaire','Toutete.',NULL);
-/*!40000 ALTER TABLE `sections` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -209,4 +182,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-11-07 17:23:29
+-- Dump completed on 2017-11-07 19:13:57

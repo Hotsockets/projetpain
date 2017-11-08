@@ -1,23 +1,29 @@
 extends layout
 //-     res.render('produit', {product:results});
 block content
-  .container-fluid
-    a(href="/") Accueil
+  .container-fluid.ariane
+    br
+    br
+    a(href="/") Accueil 
     .
       - 
-    a(href="/produits") Produits
+    a(href="/produits") Produits 
     .
       - 
-    a(href="/produit-"+product.id)= product.name
+    a(href="/produit-"+product.id)= product.name 
     .
       >
     br
+  .container-fluid
     .row.row1produit
-      .col-xs-12.col-md-7
+      .col-xs-12.offset-md-1.col-md-6
+        //- div.photo1produit(style="background-repeat:no-repeat;background-position:center;background-size:cover;background-image:url(/images/'"+product.picture+")")
         img.photo1produit(alt= product.name, src='images/'+ product.picture)
-      .col-xs-12.col-md-5
-        p.Nom!= product.name
-        h3 Description
-        p.Description!= product.description
-        h3 Ingrédients
-        p.Ingredients!= product.ingredients
+      .col-xs-12.col-md-4.texte1produit
+        .Nom
+          p!= product.name
+        .Description
+          p!= product.description
+          h3 Ingrédients
+        .Ingredients
+          p!= product.ingredients

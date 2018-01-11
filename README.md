@@ -1,21 +1,25 @@
-<p align="center"><img src="https://s26.postimg.org/ezpatu2y1/botiliciouslogo200.png" alt="Botilicious ReadMe logo")</p>
+<p align="center"><img src="https://d2gk7xgygi98cy.cloudfront.net/6667-3-large.jpg" alt="Projetpain image README.md")</p>
 
-# 🇬🇧 The Botilicious project
+# 🇬🇧 The Breadproject
 
-> We polish a few more things and we tell you the whole story 😉
+> Just follow the instructions below to run our repository on your computer 😉
 
-### Install
+### Clone the repository on your computer
 
-### Run
+### Start the node server with ```node bin/www``` or ```npm start```
+
+### Check out our project on the localhost:3000 port to start enjoying it ! 
 
 *Disclaimer: this project has no commercial purpose.*
 
-# 🇫🇷 Le projet Botilicious
+# 🇫🇷 Le projet Projetpain
 
-> On bosse encore un peu et on vous dit tout 😉
+> Si vous souhaitez avoir ce projet sur votre ordinateur, suivez simplement les instructions suivantes 😉
 
-### Installation
+### Clonez le projet sur votre ordinateur
 
-### Lancement
+### Lancez le serveur node avec ```node bin/www``` ou ```npm start```
+
+### Vous pouvez maintenant voir le rendu sur le port localhost:3000 de votre navigateur, enjoy !
 
 *Avertissement : ce projet n'a pas d'objectif commercial.*

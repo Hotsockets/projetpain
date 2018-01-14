@@ -1,6 +1,6 @@
 <p align="center"><img src="http://www.frugalfarmwife.com/wp-content/uploads/2017/04/Gf-sandwich-bread-200x200.jpg" alt="Projetpain image README.md")</p>
 
-# 🇬🇧 The Breadproject
+# 🇬🇧 The Breadproject 🥖
 
 ### Just follow the instructions below to run our repository on your computer 😉
 
@@ -12,7 +12,7 @@
 
 *Disclaimer: this project has no commercial purpose.*
 
-# 🇫🇷 Le projet Projetpain
+# 🇫🇷 Le projet Projetpain 🥖
 
 ### Si vous souhaitez avoir ce projet sur votre ordinateur, suivez simplement les instructions suivantes 😉
 
